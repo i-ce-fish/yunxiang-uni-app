@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dabb70d4-53dd-4bed-a751-5127d0d8c62d" name="默认更改列表" comment="yunxiang  uni-app  init">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/yunxiang.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\binyu\Documents\HBuilderProjects\yunxiang\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\java\apache-maven-3.5.0\repository" />
+        <option name="mavenHome" value="D:/java/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\java\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1W5m22gwlTTPPc3scGP7grMSk1X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\binyu\Documents\HBuilderProjects\yunxiang" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dabb70d4-53dd-4bed-a751-5127d0d8c62d" name="默认更改列表" comment="" />
+      <created>1578447618999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578447618999</updated>
+      <workItem from="1578447620561" duration="2300000" />
+      <workItem from="1578573265508" duration="1990000" />
+    </task>
+    <task id="LOCAL-00001" summary="yunxiang  uni-app  init">
+      <created>1578574846755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578574846755</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="yunxiang  uni-app  init" />
+    <option name="LAST_COMMIT_MESSAGE" value="yunxiang  uni-app  init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="521" y="202" key="#Notifications" timestamp="1578574884554">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="521" y="202" key="#Notifications/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578574884554" />
+    <state x="498" y="136" key="CommitChangelistDialog2" timestamp="1578575000376">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="498" y="136" key="CommitChangelistDialog2/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575000376" />
+    <state x="168" y="96" key="DiffContextDialog" timestamp="1578574999376">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="168" y="96" key="DiffContextDialog/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578574999376" />
+    <state x="709" y="298" key="FileChooserDialogImpl" timestamp="1578575117556">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="709" y="298" key="FileChooserDialogImpl/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575117556" />
+    <state x="432" y="185" key="SettingsEditor" timestamp="1578448550151">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="432" y="185" key="SettingsEditor/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578448550151" />
+    <state x="521" y="264" key="Vcs.Push.Dialog.v2" timestamp="1578575238756">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="521" y="264" key="Vcs.Push.Dialog.v2/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575238756" />
+    <state x="669" y="342" key="git4idea.merge.GitMergeDialog" timestamp="1578575154264">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="669" y="342" key="git4idea.merge.GitMergeDialog/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575154264" />
+    <state x="620" y="342" key="git4idea.merge.GitPullDialog" timestamp="1578575418408">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="620" y="342" key="git4idea.merge.GitPullDialog/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575418408" />
+  </component>
+</project>
