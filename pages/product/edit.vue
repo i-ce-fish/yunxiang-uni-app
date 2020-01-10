@@ -1,6 +1,6 @@
 <template>
 	<view>
- 
+		编辑产品
 	</view>
 </template>
 
@@ -9,11 +9,14 @@
 		data() {
 			return {
 				
-			};
+			}
+		},
+		methods: {
+			
 		}
 	}
 </script>
 
-<style lang="scss">
+<style>
 
 </style>

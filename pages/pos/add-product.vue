@@ -61,22 +61,9 @@
 				</view>
 			</uni-list-item>
 		</uni-list>
-
-
-
-
-
-
 		<view class="uni-flex uni-row-margin" style="-webkit-justify-content: flex-end;justify-content: flex-end;">
 			<view class="text uni-inline-item">
-				￥123
-			</view>
-			<view class="text uni-inline-item">
-				试算
-			</view>
-
-			<view class="text uni-inline-item">
-				￥123
+				合计：123
 			</view>
 			<view class="uni-inline-item">
 				<button type="primary" @tap="goSettlement">结算</button>

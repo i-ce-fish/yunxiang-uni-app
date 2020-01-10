@@ -30,6 +30,7 @@
 		</view>
 		<view class="uni-row-margin y-border">
 		</view>
+			<input type="text" value="" class="uni-input" placeholder="推荐人手机号" />
 		<view class="uni-flex">
 			<view class="" style="-webkit-flex: 1;flex: 1;">
 				<view class="uni-flex uni-row-margin">
@@ -50,7 +51,7 @@
  
 		<view class="uni-flex uni-row-margin">
 			<view class="text" style="-webkit-flex: 1;flex: 1;">
-				<button type="primary" @tap="confirmMember">确认</button>
+				<button type="primary" @tap="confirmMember">开始收银</button>
 			</view>
 		</view>
 	</view>

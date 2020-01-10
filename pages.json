@@ -82,6 +82,46 @@
 			"style": {
 				"navigationBarTitleText": "结算订单"
 			}
+		}, {
+			"path": "pages/pos/pay",
+			"style": {
+				"navigationBarTitleText": "收银服务-支付"
+			}
+		}, {
+			"path": "pages/pos/ticket",
+			"style": {
+				"navigationBarTitleText": "打印小票"
+			}
+		}, {
+			"path": "pages/inventory/inventory",
+			"style": {
+				"navigationBarTitleText": "库存管理"
+			}
+		}, {
+			"path": "pages/inventory/add",
+			"style": {
+				"navigationBarTitleText": "添加库存"
+			}
+		}, {
+			"path": "pages/inventory/edit",
+			"style": {
+				"navigationBarTitleText": "编辑库存"
+			}
+		}, {
+			"path": "pages/product/product",
+			"style": {
+				"navigationBarTitleText": "产品列表"
+			}
+		}, {
+			"path": "pages/product/add",
+			"style": {
+				"navigationBarTitleText": "添加产品"
+			}
+		}, {
+			"path": "pages/product/edit",
+			"style": {
+				"navigationBarTitleText": "编辑产品"
+			}
 		}
 	],
 	"tabBar": {
@@ -95,14 +135,14 @@
 				"iconPath": "static/img/home.png",
 				"selectedIconPath": "static/img/homeHL.png"
 			}, {
-				"pagePath": "pages/duty/duty",
-				"text": "当交班",
+				"pagePath": "pages/inventory/inventory",
+				"text": "库存管理",
 				"iconPath": "static/img/user.png",
 				"selectedIconPath": "static/img/userHL.png"
 			},
 			{
-				"pagePath": "pages/promotion/promotion",
-				"text": "设促销",
+				"pagePath": "pages/product/product",
+				"text": "产品管理",
 				"iconPath": "static/img/user.png",
 				"selectedIconPath": "static/img/userHL.png"
 			},

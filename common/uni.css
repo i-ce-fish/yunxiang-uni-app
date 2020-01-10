@@ -16,6 +16,14 @@ input {
 	color: #606266;
 }
 
+/* 水平居中 */
+.y-center-hor {
+	display: flex;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
 /* 分隔符 */
 
 .y-border {
@@ -198,7 +206,8 @@ form {
 
 .uni-h5 {
 	font-size: 28upx;
-	color: #8f8f94;
+	color:
+		#8f8f94;
 }
 
 .uni-h6 {
