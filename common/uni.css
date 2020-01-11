@@ -24,6 +24,25 @@ input {
 	justify-content: center;
 }
 
+/* 列表 */
+.y-body-list {
+	/* width: 750upx; */
+	width: 100%;
+	padding: 0;
+	margin-top: 30upx;
+}
+/* body */
+.y-body{
+	width:750upx;
+	margin:0 30upx;
+	margin-top: 30upx;
+}
+
+/*  边距 */
+.y-margin {
+	margin: 0 30upx ;
+}
+
 /* 分隔符 */
 
 .y-border {
@@ -120,6 +139,7 @@ form {
 .uni-padding-wrap {
 	width: 690upx;
 	padding: 0 30upx;
+
 }
 
 .uni-word {

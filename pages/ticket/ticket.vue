@@ -1,24 +1,18 @@
 <template>
 	<view class="y-body-list">
-		<view>
-			<uni-search-bar placeholder="手机/小票单号/条码" @confirm="search"></uni-search-bar>
-			<view class="uni-list">
-				<view class="uni-list-cell">
-					<view class="uni-list-cell-left">
-						选择日期
-					</view>
-					<view class="uni-list-cell-db">
-						<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-							<view class="uni-input">{{date}}</view>
-						</picker>
-					</view>
+		<uni-search-bar placeholder="搜索小票单号" @confirm="search"></uni-search-bar>
+		<view class="uni-list">
+			<view class="uni-list-cell">
+				<view class="uni-list-cell-left">
+					选择日期
+				</view>
+				<view class="uni-list-cell-db">
+					<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+						<view class="uni-input">{{date}}</view>
+					</picker>
 				</view>
 			</view>
-			<view>
-				<uni-calendar ref="date" :insert="false" :range="true" @change="change"></uni-calendar>
-			</view>
 		</view>
-
 		<uni-list>
 			<uni-list-item v-for="i in 4" :key="i" :show-arrow="false" @tap="goTicketDetail">
 				<view class="uni-row-margin">
@@ -32,14 +26,15 @@
 					</view>
 					<view class="uni-flex uni-row">
 						<view class="uni-flex-item">
-							会员：1234567789
+							会员：123489
+						</view>
+						<view class="uni-flex-item ">
+							件数: {{i}} 
 						</view>
 						<view class="uni-flex-item text-right ">
-							件数: 1 实付: ￥99.99
+							已支付: ￥99.9
 						</view>
 					</view>
-
-
 				</view>
 			</uni-list-item>
 		</uni-list>
@@ -51,7 +46,7 @@
 <script>
 	import uniList from "@/components/uni-list/uni-list.vue"
 	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
-	import uniCalendar from '@/components/uni-calendar/uni-calendar.vue'
+	import uniSegmentedControl from "@/components/uni-segmented-control/uni-segmented-control.vue"
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 
 	function getDate(type) {
@@ -75,11 +70,15 @@
 		components: {
 			uniList,
 			uniListItem,
-			uniCalendar,
+			uniSegmentedControl,
 			uniSearchBar
 		},
 		data() {
 			return {
+				items: ['当日未付款订单', '当日已付款订单'],
+				current: 0,
+				activeColor: '#007aff',
+				styleType: 'button',
 				date: getDate({
 					format: true
 				}),
@@ -89,22 +88,18 @@
 			}
 		},
 		methods: {
-			goTicketDetail() {
-				uni.navigateTo({
-					url: "ticket-detail"
-				})
+			onClickItem(e) {
+				if (this.current !== e.currentIndex) {
+					this.current = e.currentIndex;
+				}
 			},
-
 			bindDateChange: function(e) {
 				this.date = e.target.value
 			}
-
 		}
 	}
 </script>
 
-<style>
-	.text-right {
-		text-align: right;
-	}
+<style lang="scss">
+
 </style>

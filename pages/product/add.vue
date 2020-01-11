@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-padding-wrap uni-common-mt " >
+	<view class="y-body" >
 		<view class="uni-row-margin">
 			<input type="text" value="" class="uni-input" placeholder="品牌" />
 		</view>

@@ -4,7 +4,7 @@
 		{
 			"path": "pages/main/main",
 			"style": {
-				"navigationBarTitleText": "登录模板"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
@@ -110,56 +110,86 @@
 		}, {
 			"path": "pages/product/product",
 			"style": {
-				"navigationBarTitleText": "产品列表"
+				"navigationBarTitleText": "商品列表"
 			}
 		}, {
 			"path": "pages/product/add",
 			"style": {
-				"navigationBarTitleText": "添加产品"
+				"navigationBarTitleText": "添加商品"
 			}
 		}, {
 			"path": "pages/product/edit",
 			"style": {
-				"navigationBarTitleText": "编辑产品"
+				"navigationBarTitleText": "编辑商品"
+			}
+		}, {
+			"path": "pages/product/search",
+			"style": {
+				"navigationBarTitleText": "查商品"
+			}
+		}, {
+			"path": "pages/inventory/search",
+			"style": {
+				"navigationBarTitleText": "查库存"
+			}
+		}, {
+			"path": "pages/product/detail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		}, {
+			"path": "pages/inventory/detail",
+			"style": {
+				"navigationBarTitleText": "库存详情"
+			}
+		}, {
+			"path": "pages/today-order/today-order",
+			"style": {
+				"navigationBarTitleText": "当日订单"
+			}
+		}, {
+			"path": "pages/ticket/ticket",
+			"style": {
+				"navigationBarTitleText": "小票记录"
 			}
 		}
 	],
-	"tabBar": {
-		"color": "#7a7e83",
-		"selectedColor": "#0faeff",
-		"backgroundColor": "#ffffff",
-		"list": [{
-				// "pagePath": "pages/main/main",
-				"pagePath": "pages/pos/guest",
-				"text": "收银",
-				"iconPath": "static/img/home.png",
-				"selectedIconPath": "static/img/homeHL.png"
-			}, {
-				"pagePath": "pages/inventory/inventory",
-				"text": "库存管理",
-				"iconPath": "static/img/user.png",
-				"selectedIconPath": "static/img/userHL.png"
-			},
-			{
-				"pagePath": "pages/product/product",
-				"text": "产品管理",
-				"iconPath": "static/img/user.png",
-				"selectedIconPath": "static/img/userHL.png"
-			},
-			{
-				"pagePath": "pages/returns/returns",
-				"text": "退换货",
-				"iconPath": "static/img/user.png",
-				"selectedIconPath": "static/img/userHL.png"
-			},
-			{
-				"pagePath": "pages/cart/cart",
-				"text": "购物车",
-				"iconPath": "static/img/user.png",
-				"selectedIconPath": "static/img/userHL.png"
-			}
-		]
-	},
+	// "tabBar": {
+	// 	"color": "#7a7e83",
+	// 	"selectedColor": "#0faeff",
+	// 	"backgroundColor": "#ffffff",
+	// 	"list": [{
+	// 			"pagePath": "pages/main/main",
+	// 			// "pagePath": "pages/pos/guest",
+	// 			"text": "收银",
+	// 			"iconPath": "static/img/home.png",
+	// 			"selectedIconPath": "static/img/homeHL.png"
+	// 		}, {
+	// 			"pagePath": "pages/inventory/inventory",
+	// 			"text": "库存管理",
+	// 			"iconPath": "static/img/user.png",
+	// 			"selectedIconPath": "static/img/userHL.png"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/product/product",
+	// 			"text": "商品管理",
+	// 			"iconPath": "static/img/user.png",
+	// 			"selectedIconPath": "static/img/userHL.png"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/returns/returns",
+	// 			"text": "退换货",
+	// 			"iconPath": "static/img/user.png",
+	// 			"selectedIconPath": "static/img/userHL.png"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/cart/cart",
+	// 			"text": "购物车",
+	// 			"iconPath": "static/img/user.png",
+	// 			"selectedIconPath": "static/img/userHL.png"
+	// 		}
+	// 	]
+	// },
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarBackgroundColor": "#0faeff",

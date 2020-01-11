@@ -1,7 +1,7 @@
 <template>
 	<view class="">
 		<notice-bar-member-detail></notice-bar-member-detail>
-		<view class="uni-padding-wrap uni-common-mt ">
+		<view class="y-body">
 			<view class="uni-row">
 				<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
 					<view @tap="getProduct(i)" :id="i" class="scroll-view-item_H" v-for="i in 6" :key="i">

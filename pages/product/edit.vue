@@ -1,6 +1,6 @@
 <template>
 	<view>
-		编辑产品
+		编辑商品
 	</view>
 </template>
 

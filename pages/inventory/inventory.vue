@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-padding-wrap uni-common-mt ">
+	<view class=" y-body-list ">
 		<view class="uni-flex">
 
 			<uni-grid :column="4" :showBorder="false">

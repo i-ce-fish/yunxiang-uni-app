@@ -1,31 +1,35 @@
 <template>
-	<view class="uni-padding-wrap uni-common-mt ">
-		<uni-grid :column="4" :showBorder="false">
-			<uni-grid-item>
-				<view @tap="goAddProduct"  class="icon-item">
-					<uni-icons type="plus" size="30"></uni-icons>
-					<text class="icon-item-text">添加</text>
-				</view>
-			</uni-grid-item>
-			<uni-grid-item>
-				<view class="icon-item">
-					<uni-icons type="search" size="30"></uni-icons>
-					<text class="icon-item-text">搜索</text>
-				</view>
-			</uni-grid-item>
-			<uni-grid-item>
-				<view class="icon-item">
-					<uni-icons type="more" size="30"></uni-icons>
-					<text class="icon-item-text">待定</text>
-				</view>
-			</uni-grid-item>
-			<uni-grid-item>
-				<view class="icon-item">
-					<uni-icons type="more" size="30"></uni-icons>
-					<text class="icon-item-text">待定</text>
-				</view>
-			</uni-grid-item>
-		</uni-grid>
+	<view class="y-body-list ">
+		<!-- <uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar> -->
+		
+		<view class="y-margin">
+			<uni-grid :column="4" :showBorder="false">
+				<uni-grid-item>
+					<view @tap="goAddProduct"  class="icon-item">
+						<uni-icons type="plus" size="30"></uni-icons>
+						<text class="icon-item-text">添加</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item>
+					<view class="icon-item">
+						<uni-icons type="search" size="30"></uni-icons>
+						<text class="icon-item-text">搜索</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item>
+					<view class="icon-item">
+						<uni-icons type="more" size="30"></uni-icons>
+						<text class="icon-item-text">待定</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item>
+					<view class="icon-item">
+						<uni-icons type="more" size="30"></uni-icons>
+						<text class="icon-item-text">待定</text>
+					</view>
+				</uni-grid-item>
+			</uni-grid>
+		</view>
 		
 		
 	<view class="uni-row-margin">
@@ -43,13 +47,15 @@
 	import uniGrid from "@/components/uni-grid/uni-grid.vue"
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
 	import uniIcons from "@/components/uni-icons/uni-icons.vue"
+	import uniNavBar from "@/components/uni-nav-bar/uni-nav-bar.vue"
+	
 	export default {
 		components: {
 			uniList,
 			uniListItem,
 			uniGrid,
 			uniGridItem,
-			uniIcons
+			uniIcons,uniNavBar
 		},
 		data() {
 			return {

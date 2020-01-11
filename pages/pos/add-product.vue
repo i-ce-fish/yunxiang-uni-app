@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-padding-wrap uni-common-mt ">
+	<view class="y-body">
 		<view class="uni-flex uni-row-margin">
 			<view class="uni-flex-item">
 				<input class="uni-input" type="text" v-model="barcode" placeholder="请扫码" />

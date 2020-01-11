@@ -67,8 +67,7 @@
 						data: res.data.token
 					})
 					uni.reLaunch({
-						
-						url: '../pos/pos'
+						url: '../main/main'
 					});
 					
 				})

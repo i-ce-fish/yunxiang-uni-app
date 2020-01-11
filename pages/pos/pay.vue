@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<notice-bar-member-detail></notice-bar-member-detail>
-		<view class="uni-padding-wrap uni-common-mt ">
+		<view class="y-body">
 			<view class="uni-row">
 				<uni-list>
 					<uni-list-item :noHover="noHover" :show-arrow="false">
