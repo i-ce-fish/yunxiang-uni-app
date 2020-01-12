@@ -1,19 +1,56 @@
 <template>
 	<view class="y-body-list">
 		<view>
-			<uni-search-bar placeholder="手机/小票单号/条码" @confirm="search"></uni-search-bar>
-			<view class="uni-list">
-				<view class="uni-list-cell">
-					<view class="uni-list-cell-left">
-						选择日期
+			<uni-segmented-control class="y-margin" :active-color="activeColor" :style-type="styleType" :current="current"
+			 :values="items" @clickItem="onClickItem" style-type="button" active-color="#4cd964"></uni-segmented-control>
+			<view v-show="current === 0">
+				<uni-search-bar placeholder="小票单号" @confirm="search"></uni-search-bar>
+			</view>
+			<view v-show="current === 1">
+				<uni-search-bar placeholder="会员手机号" @confirm="search"></uni-search-bar>
+			</view>
+			<view v-show="current === 2">
+				<uni-search-bar placeholder="商品条码" @confirm="search"></uni-search-bar>
+			</view>
+			<view v-show="current === 3">
+				<view class="uni-list">
+					<view class="uni-list-cell">
+						<view class="uni-list-cell-left">
+							选择日期范围
+						</view>
+						<view class="uni-list-cell-db">
+							<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+								<view class="uni-input">{{date}}</view>
+							</picker>
+						</view>
+						<view class="uni-list-cell-db">
+							<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+								<view class="uni-input">{{date}}</view>
+							</picker>
+						</view>
 					</view>
-					<view class="uni-list-cell-db">
-						<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-							<view class="uni-input">{{date}}</view>
-						</picker>
+					<view class="uni-list-cell">
+						<view class="uni-list-cell-left">
+							选择时间范围
+						</view>
+						<view class="uni-list-cell-db">
+							<picker mode="time" :value="time" start="06:00" @change="bindTimeChange">
+								<view class="uni-input">{{time}}</view>
+							</picker>
+						</view>
+						<view class="uni-list-cell-db">
+							<picker mode="time" :value="time" start="06:00" @change="bindTimeChange">
+								<view class="uni-input">{{time}}</view>
+							</picker>
+						</view>
 					</view>
 				</view>
+
 			</view>
+
+
+
+
 			<view>
 				<uni-calendar ref="date" :insert="false" :range="true" @change="change"></uni-calendar>
 			</view>
@@ -53,6 +90,7 @@
 	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	import uniCalendar from '@/components/uni-calendar/uni-calendar.vue'
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
+	import uniSegmentedControl from "@/components/uni-segmented-control/uni-segmented-control.vue"
 
 	function getDate(type) {
 		const date = new Date();
@@ -76,7 +114,8 @@
 			uniList,
 			uniListItem,
 			uniCalendar,
-			uniSearchBar
+			uniSearchBar,
+			uniSegmentedControl
 		},
 		data() {
 			return {
@@ -85,6 +124,13 @@
 				}),
 				startDate: getDate('start'),
 				endDate: getDate('end'),
+				time: '12:01',
+				items: ['小票', '会员', '条码', '日期'],
+				current: 0,
+				activeColor: '#007aff',
+				styleType: 'button'
+
+
 
 			}
 		},
@@ -97,6 +143,15 @@
 
 			bindDateChange: function(e) {
 				this.date = e.target.value
+			},
+			bindTimeChange: function(e) {
+				this.time = e.target.value
+			},
+
+			onClickItem(e) {
+				if (this.current !== e.currentIndex) {
+					this.current = e.currentIndex;
+				}
 			}
 
 		}

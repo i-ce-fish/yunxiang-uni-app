@@ -20,7 +20,7 @@
 		}, {
 			"path": "pages/returns/returns",
 			"style": {
-				"navigationBarTitleText": "退换货"
+				"navigationBarTitleText": "收银服务-退换货查询小票"
 			}
 		}, {
 			"path": "pages/cart/cart",
@@ -60,7 +60,7 @@
 		}, {
 			"path": "pages/pos/guest",
 			"style": {
-				"navigationBarTitleText": "确认顾客"
+				"navigationBarTitleText": "收银服务-确认顾客"
 			}
 		}, {
 			"path": "pages/pos/member-info",
@@ -70,17 +70,17 @@
 		}, {
 			"path": "pages/pos/add-product",
 			"style": {
-				"navigationBarTitleText": "添加商品"
+				"navigationBarTitleText": "收银服务-添加商品"
 			}
 		}, {
 			"path": "pages/returns/ticket-detail",
 			"style": {
-				"navigationBarTitleText": "小票详情"
+				"navigationBarTitleText": "收银服务-小票详情"
 			}
 		}, {
 			"path": "pages/pos/settlement",
 			"style": {
-				"navigationBarTitleText": "结算订单"
+				"navigationBarTitleText": "收银服务-结算订单"
 			}
 		}, {
 			"path": "pages/pos/pay",
@@ -90,7 +90,7 @@
 		}, {
 			"path": "pages/pos/ticket",
 			"style": {
-				"navigationBarTitleText": "打印小票"
+				"navigationBarTitleText": "收银服务-打印小票"
 			}
 		}, {
 			"path": "pages/inventory/inventory",
@@ -125,13 +125,29 @@
 		}, {
 			"path": "pages/product/search",
 			"style": {
-				"navigationBarTitleText": "查商品"
-			}
+				"navigationBarTitleText": "查商品",
+				"app-plus": {  
+				            "titleNView": {  
+				                "buttons": [{  
+				                    "text": "\ue534",  
+				                    "fontSrc": "/static/uni.ttf",  
+				                    "fontSize": "26px"  
+				                }]  
+				            }  
+			}}
 		}, {
 			"path": "pages/inventory/search",
 			"style": {
-				"navigationBarTitleText": "查库存"
-			}
+				"navigationBarTitleText": "查库存",
+				"app-plus": {
+				            "titleNView": {  
+				                "buttons": [{  
+				                    "text": "\ue534",  
+				                    "fontSrc": "/static/uni.ttf",  
+				                    "fontSize": "26px"  
+				                }]  
+				            }
+			}}
 		}, {
 			"path": "pages/product/detail",
 			"style": {

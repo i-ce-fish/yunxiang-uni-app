@@ -1,9 +1,7 @@
 <template>
 	<view class="y-body">
+			<uni-search-bar placeholder="商品编号" @confirm="search"></uni-search-bar>
 		<view class="uni-flex uni-row-margin">
-			<view class="uni-flex-item">
-				<input type="text" value="" class="uni-input" placeholder="商品编号" />
-			</view>
 
 			<view class="uni-inline-item">
 				<button type="primary" @tap="go('detail')">确认</button>
@@ -14,7 +12,11 @@
 </template>
 
 <script>
+	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 	export default {
+		components:{
+			uniSearchBar
+		},
 		data() {
 			return {
 

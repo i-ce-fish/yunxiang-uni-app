@@ -1,19 +1,18 @@
 <template>
 	<view class="y-body-list ">
-		<!-- <uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar> -->
 		
 		<view class="y-margin">
 			<uni-grid :column="4" :showBorder="false">
 				<uni-grid-item>
-					<view @tap="goAddProduct"  class="icon-item">
+					<view  @tap="go('add')"  class="icon-item">
 						<uni-icons type="plus" size="30"></uni-icons>
 						<text class="icon-item-text">添加</text>
 					</view>
 				</uni-grid-item>
 				<uni-grid-item>
-					<view class="icon-item">
+					<view @tap="go('search')" class="icon-item">
 						<uni-icons type="search" size="30"></uni-icons>
-						<text class="icon-item-text">搜索</text>
+						<text class="icon-item-text" >搜索</text>
 					</view>
 				</uni-grid-item>
 				<uni-grid-item>
@@ -34,7 +33,7 @@
 		
 	<view class="uni-row-margin">
 			<uni-list>
-				<uni-list-item :title="'森马冬季羽绒服款(男款)'+i" :note='"款号:1234567890 品牌：美邦  2020冬" +i' v-for="i in 10" :key="i" :show-arrow="true" @tap="goEditInventory">
+				<uni-list-item :title="'森马冬季羽绒服款(男款)'+i" :note='"款号:1234567890 品牌：美邦  2020冬" +i' v-for="i in 10" :key="i" :show-arrow="true"  @tap="go('edit')">
 				</uni-list-item>
 			</uni-list>
 		</view>
@@ -47,7 +46,6 @@
 	import uniGrid from "@/components/uni-grid/uni-grid.vue"
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
 	import uniIcons from "@/components/uni-icons/uni-icons.vue"
-	import uniNavBar from "@/components/uni-nav-bar/uni-nav-bar.vue"
 	
 	export default {
 		components: {
@@ -55,7 +53,7 @@
 			uniListItem,
 			uniGrid,
 			uniGridItem,
-			uniIcons,uniNavBar
+			uniIcons
 		},
 		data() {
 			return {
@@ -63,14 +61,9 @@
 			};
 		},
 		methods: {
-			goAddProduct() {
+			go(url) {
 				uni.navigateTo({
-					url: "add"
-				})
-			},
-			goEditProduct() {
-				uni.navigateTo({
-					url: "edit"
+					url: url
 				})
 			}
 		}

@@ -26,14 +26,15 @@ input {
 
 /* 列表 */
 .y-body-list {
-	/* width: 750upx; */
-	width: 100%;
+	width: 750upx;
+	/* width: 100%; */
 	padding: 0;
 	margin-top: 30upx;
 }
 /* body */
 .y-body{
 	width:750upx;
+	/* margin:0 30upx 0 30upx; */
 	margin:0 30upx;
 	margin-top: 30upx;
 }

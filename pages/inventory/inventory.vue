@@ -4,15 +4,15 @@
 
 			<uni-grid :column="4" :showBorder="false">
 				<uni-grid-item>
-					<view @tap="goAddInventory"  class="icon-item">
+					<view @tap="go('add')" class="icon-item">
 						<uni-icons type="plus" size="30"></uni-icons>
-						<text class="icon-item-text">添加</text>
+						<text class="icon-item-text" >添加</text>
 					</view>
 				</uni-grid-item>
 				<uni-grid-item>
-					<view class="icon-item">
+					<view @tap="go('search')" class="icon-item">
 						<uni-icons type="search" size="30"></uni-icons>
-						<text class="icon-item-text">搜索</text>
+						<text class="icon-item-text" >搜索</text>
 					</view>
 				</uni-grid-item>
 				<uni-grid-item>
@@ -28,11 +28,12 @@
 					</view>
 				</uni-grid-item>
 			</uni-grid>
-			 
+
 		</view>
 		<view class="uni-row-margin">
 			<uni-list>
-				<uni-list-item :title="'森马冬季羽绒服'+i" :note='"条码:1234567890 颜色：红 尺码：M 数量：23 价格：99" +i' v-for="i in 10" :key="i" :show-arrow="true" @tap="goEditInventory">
+				<uni-list-item :title="'森马冬季羽绒服'+i" :note='"条码:1234567890 颜色：红 尺码：M 数量：23 价格：99" +i' v-for="i in 10" :key="i"
+				 :show-arrow="true" @tap="go('edit')">
 				</uni-list-item>
 			</uni-list>
 		</view>
@@ -56,14 +57,9 @@
 			return {};
 		},
 		methods: {
-			goAddInventory() {
+			go(url) {
 				uni.navigateTo({
-					url: "add"
-				})
-			},
-			goEditInventory() {
-				uni.navigateTo({
-					url: "edit"
+					url: url
 				})
 			}
 		}

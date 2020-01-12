@@ -77,15 +77,18 @@
 			</view>
 		</view>
 		<view class="uni-flex uni-row" style="margin-bottom: 14px;">
+
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
-				<button type="default" plain="true" @tap="go('../inventory/search')">查库存</button>
+				<button type="default" plain="true" @tap="goTab('../inventory/inventory')">库存管理</button>
 			</view>
+
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
 				<button type="default" plain="true" @tap="go('../inventory/add')">新入库</button>
 			</view>
-			<view class="text" style="-webkit-flex: 1;flex: 1;">
-
+			<view class="text" style="-webkit-flex: 1;flex: 1 ">
+				<button type="default" plain="true" @tap="go('../inventory/search')">查库存</button>
 			</view>
+
 		</view>
 		<view class="uni-flex uni-row" style="margin-bottom: 14px;">
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
@@ -172,9 +175,9 @@
 					url: url
 				})
 			},
-			goTab(url){
+			goTab(url) {
 				uni.navigateTo({
-					url:url
+					url: url
 				})
 			}
 		}
