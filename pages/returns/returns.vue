@@ -1,8 +1,7 @@
 <template>
 	<view class="y-body-list">
 		<view>
-			<uni-segmented-control class="y-margin" :active-color="activeColor" :style-type="styleType" :current="current"
-			 :values="items" @clickItem="onClickItem" style-type="button" active-color="#4cd964"></uni-segmented-control>
+			<uni-segmented-control class="y-margin" active-color="#007aff" style-type="button" :current="current" :values="items" @clickItem="onClickItem"></uni-segmented-control>
 			<view v-show="current === 0">
 				<uni-search-bar placeholder="小票单号" @confirm="search"></uni-search-bar>
 			</view>
@@ -75,19 +74,19 @@
 							件数: 1 实付: ￥99.99
 						</view>
 					</view>
-
-
 				</view>
 			</uni-list-item>
 		</uni-list>
 
+<view class="uni-row y-center-hor y-margin-bottom" >
+				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
+		</view>
+		
 
 	</view>
 </template>
 
 <script>
-	import uniList from "@/components/uni-list/uni-list.vue"
-	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	import uniCalendar from '@/components/uni-calendar/uni-calendar.vue'
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 	import uniSegmentedControl from "@/components/uni-segmented-control/uni-segmented-control.vue"
@@ -111,8 +110,6 @@
 	}
 	export default {
 		components: {
-			uniList,
-			uniListItem,
 			uniCalendar,
 			uniSearchBar,
 			uniSegmentedControl
@@ -126,9 +123,7 @@
 				endDate: getDate('end'),
 				time: '12:01',
 				items: ['小票', '会员', '条码', '日期'],
-				current: 0,
-				activeColor: '#007aff',
-				styleType: 'button'
+				current: 0
 
 
 

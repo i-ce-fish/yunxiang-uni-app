@@ -169,7 +169,11 @@
 				"navigationBarTitleText": "小票记录"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/test/test",
+            "style" : {				"navigationBarTitleText": "测试组件"}
+        }
+    ],
 	// "tabBar": {
 	// 	"color": "#7a7e83",
 	// 	"selectedColor": "#0faeff",

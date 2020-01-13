@@ -24,18 +24,18 @@
 				</uni-list-item>
 			</uni-list>
 		</view>
+		<view class="uni-row y-center-hor y-margin-bottom" >
+				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
+		</view>
+		
 	</view>
 </template>
 
 <script>
-	import uniList from "@/components/uni-list/uni-list.vue"
-	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	import yDrawer from '../../components/y-componnents/drawer/drawer.vue'
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 	export default {
 		components: {
-			uniList,
-			uniListItem,
 			yDrawer,uniSearchBar
 
 		},

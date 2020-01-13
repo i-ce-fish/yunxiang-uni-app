@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "收银服务-结算订单",
+  "usingComponents": {
+    "notice-bar-member-detail": "/components/y-componnents/notice-bar/notice-bar-member-detail",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "uni-card": "/components/uni-card/uni-card"
+  }
+}

@@ -92,7 +92,7 @@
 		</view>
 		<view class="uni-flex uni-row" style="margin-bottom: 14px;">
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
-				<button type="default" @tap="go('../ticket/ticket')">小票记录</button>
+				<button class="test" type="default" @tap="go('../ticket/ticket')">小票记录</button>
 			</view>
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
 				<button type="default" @tap="goTab('../returns/returns')">退换货</button>
@@ -112,9 +112,11 @@
 
 			</view>
 		</view>
-
-
-
+		<view class="uni-flex uni-row">
+			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
+				<button style="background-color: #0A98D5;color: #55ffff;" type="default" plain="true" @tap="go('../test/test')">测试组件</button>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -131,6 +133,8 @@
 			uniGrid,
 			uniGridItem,
 			uniIcons
+
+
 		},
 		computed: mapState(['forcedLogin', 'token', 'userName']),
 		onLoad() {
@@ -176,7 +180,7 @@
 				})
 			},
 			goTab(url) {
-				uni.navigateTo({
+				uni.switchTab({
 					url: url
 				})
 			}

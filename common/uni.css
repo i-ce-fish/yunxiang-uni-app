@@ -4,9 +4,8 @@
 	font-style: normal;
 	src: url('~@/static/uni.ttf') format('truetype');
 }
-
 /* 自定义样式 */
-input:hover {
+/* input:hover {
 	border: 1px solid #409eff;
 }
 
@@ -14,7 +13,7 @@ input {
 	border-radius: 4px;
 	border: 1px solid #dcdfe6;
 	color: #606266;
-}
+} */
 
 /* 水平居中 */
 .y-center-hor {
@@ -23,25 +22,34 @@ input {
 	-webkit-justify-content: center;
 	justify-content: center;
 }
-
+.y-body-bg{
+	width: 750rpx;
+	background-color: #efeff4;
+}
 /* 列表 */
 .y-body-list {
-	width: 750upx;
+	width: 750rpx;
 	/* width: 100%; */
 	padding: 0;
-	margin-top: 30upx;
+	margin-top: 30rpx;
+	background-color: #efeff4;
 }
+
 /* body */
-.y-body{
-	width:750upx;
-	/* margin:0 30upx 0 30upx; */
-	margin:0 30upx;
-	margin-top: 30upx;
+.y-body {
+	width: 750rpx;
+	padding: 0 30rpx;
+	padding-top: 30rpx;
+	background-color: #efeff4;
 }
 
 /*  边距 */
 .y-margin {
-	margin: 0 30upx ;
+	margin: 0 30rpx;
+}
+
+.y-margin-bottom {
+	margin-bottom: 30rpx;
 }
 
 /* 分隔符 */
@@ -51,10 +59,20 @@ input {
 	border-top: 1px solid #ddd;
 	text-align: center;
 }
+/* 表单项 */
+.y-form-item{
+	height: 60rpx;
+	padding: 20upx 0upx;
+	padding-left: 20upx;
+	background-color: #FFFFFF;
+	width: auto;
+	border-bottom:1px solid #ddd;
+} 
+
 
 /*通用 */
 view {
-	font-size: 28upx;
+	font-size: 32upx;
 	line-height: 1.8;
 }
 

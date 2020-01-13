@@ -75,9 +75,9 @@
 
 <style lang="scss">
 	.scroll-Y {
-		display: inline;
+		// display: inline;
+		height: 1000upx;
 	}
 	.scroll-view-item {
-		height: 100upx;
 	}
 </style>

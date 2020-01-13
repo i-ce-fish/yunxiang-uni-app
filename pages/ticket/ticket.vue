@@ -44,8 +44,6 @@
 </template>
 
 <script>
-	import uniList from "@/components/uni-list/uni-list.vue"
-	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	import uniSegmentedControl from "@/components/uni-segmented-control/uni-segmented-control.vue"
 	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
 
@@ -68,8 +66,6 @@
 	}
 	export default {
 		components: {
-			uniList,
-			uniListItem,
 			uniSegmentedControl,
 			uniSearchBar
 		},

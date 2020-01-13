@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/main/main"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#0faeff",
+    "backgroundColor": "#fbf9fe"
+  },
+  "usingComponents": {
+    "uni-pagination": "/components/uni-pagination/uni-pagination",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item"
+  }
+}

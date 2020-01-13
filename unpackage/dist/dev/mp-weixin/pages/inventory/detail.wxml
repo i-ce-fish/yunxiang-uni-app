@@ -1,0 +1,1 @@
+<view class="y-body"><uni-search-bar vue-id="1" placeholder="商品编号" data-event-opts="{{[['^confirm',[['search']]]]}}" bind:confirm="__e" bind:__l="__l"></uni-search-bar><view class="uni-flex uni-row-margin"><view class="uni-inline-item"><button type="primary" data-event-opts="{{[['tap',[['go',['detail']]]]]}}" bindtap="__e">确认</button></view></view></view>

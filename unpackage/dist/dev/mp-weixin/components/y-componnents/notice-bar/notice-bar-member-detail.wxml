@@ -1,0 +1,1 @@
+<view><notice-bar-popup vue-id="1" noticeText="{{noticeText}}" bind:__l="__l" vue-slots="{{['content']}}"><view slot="content"><view>会员详情</view></view></notice-bar-popup></view>

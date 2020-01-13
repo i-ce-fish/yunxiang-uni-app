@@ -1,0 +1,1 @@
+<uni-notice-bar vue-id="1" showIcon="true" showGetMore="true" single="true" text="{{text}}" data-event-opts="{{[['^tap',[['getMore']]],['^getmore',[['getMore']]]]}}" bind:tap="__e" bind:getmore="__e" bind:__l="__l"></uni-notice-bar>

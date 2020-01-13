@@ -1,0 +1,1 @@
+<view class="uni-flex uni-row-margin"><view class="uni-flex-item"><input class="uni-input" type="text" placeholder="请扫码" data-event-opts="{{[['input',[['__set_model',['','barcode','$event',[]]]]]]}}" value="{{barcode}}" bindinput="__e"/></view><view data-event-opts="{{[['tap',[['scan',['$event']]]]]}}" class="uni-inline-item" bindtap="__e">点击扫码</view></view>

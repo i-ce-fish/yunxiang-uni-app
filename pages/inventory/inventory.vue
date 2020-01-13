@@ -37,6 +37,13 @@
 				</uni-list-item>
 			</uni-list>
 		</view>
+		
+		<view class="uni-row y-center-hor y-margin-bottom" >
+				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
+		</view>
+	 
+		
+		
 	</view>
 </template>
 <script>
@@ -45,13 +52,16 @@
 	import uniGrid from "@/components/uni-grid/uni-grid.vue"
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
 	import uniIcons from "@/components/uni-icons/uni-icons.vue"
+	import uniPagination from '@/components/uni-pagination/uni-pagination.vue'
+	
 	export default {
 		components: {
 			uniGrid,
 			uniGridItem,
 			uniList,
 			uniListItem,
-			uniIcons
+			uniIcons,
+			uniPagination
 		},
 		data() {
 			return {};
@@ -97,4 +107,6 @@
 		font-size: 24rpx;
 		text-align: center;
 	}
+	
+	 
 </style>

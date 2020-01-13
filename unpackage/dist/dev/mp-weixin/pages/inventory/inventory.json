@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "库存管理",
+  "usingComponents": {
+    "uni-grid": "/components/uni-grid/uni-grid",
+    "uni-grid-item": "/components/uni-grid-item/uni-grid-item",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "uni-icons": "/components/uni-icons/uni-icons",
+    "uni-pagination": "/components/uni-pagination/uni-pagination"
+  }
+}
