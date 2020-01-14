@@ -4,6 +4,7 @@
 	font-style: normal;
 	src: url('~@/static/uni.ttf') format('truetype');
 }
+
 /* 自定义样式 */
 /* input:hover {
 	border: 1px solid #409eff;
@@ -15,6 +16,7 @@ input {
 	color: #606266;
 } */
 
+
 /* 水平居中 */
 .y-center-hor {
 	display: flex;
@@ -22,10 +24,12 @@ input {
 	-webkit-justify-content: center;
 	justify-content: center;
 }
-.y-body-bg{
+
+.y-body-bg {
 	width: 750rpx;
 	background-color: #efeff4;
 }
+
 /* 列表 */
 .y-body-list {
 	width: 750rpx;
@@ -59,16 +63,34 @@ input {
 	border-top: 1px solid #ddd;
 	text-align: center;
 }
+
 /* 表单项 */
-.y-form-item{
+.y-form-item {
 	height: 60rpx;
 	padding: 20upx 0upx;
 	padding-left: 20upx;
 	background-color: #FFFFFF;
 	width: auto;
-	border-bottom:1px solid #ddd;
-} 
+	border-bottom: 1px solid #ddd;
+}
 
+/* 表单组件 */
+.y-input {
+	/* single-input */
+	height: 50upx;
+	padding: 10upx ;
+	margin: 10rpx 25upx;
+	line-height: 50upx;
+	/* font-size: 28upx; */
+	background: #FFF;
+	flex: 1;
+	
+	/* border */
+	border-bottom: 1px solid #007AFF;
+	/* double-input */
+	
+	/* selected */
+}
 
 /*通用 */
 view {
@@ -573,6 +595,7 @@ checkbox-group label {
 .uni-list-cell-db,
 .uni-list-cell-right {
 	flex: 1;
+	
 }
 
 .uni-list-cell::after {

@@ -35,7 +35,7 @@
 			}
 		},
 		methods: {
-			getMore() {
+			getMore() {	
 				this.$refs.popup.open()
 			}
 		}

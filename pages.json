@@ -173,6 +173,10 @@
             "path" : "pages/test/test",
             "style" : {				"navigationBarTitleText": "测试组件"}
         }
+        ,{
+            "path" : "pages/test/selectSex",
+            "style" : {}
+        }
     ],
 	// "tabBar": {
 	// 	"color": "#7a7e83",
