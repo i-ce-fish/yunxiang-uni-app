@@ -67,7 +67,7 @@
 		</view>
 		<view class="uni-flex uni-row" style="margin-bottom: 14px;">
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
-				<button type="default" plain="true" @tap="goTab('../product/product')">商品管理</button>
+				<button type="default" plain="true" @tap="go('../product/product')">商品管理</button>
 			</view>
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
 				<button type="default" plain="true" @tap="go('../product/add')">商品建档</button>
@@ -79,7 +79,7 @@
 		<view class="uni-flex uni-row" style="margin-bottom: 14px;">
 
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
-				<button type="default" plain="true" @tap="goTab('../inventory/inventory')">库存管理</button>
+				<button type="default" plain="true" @tap="go('../inventory/inventory')">库存管理</button>
 			</view>
 
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
@@ -95,7 +95,7 @@
 				<button class="test" type="default" @tap="go('../ticket/ticket')">小票记录</button>
 			</view>
 			<view class="text" style="-webkit-flex: 1;flex: 1; margin-right: 14rpx;">
-				<button type="default" @tap="goTab('../returns/returns')">退换货</button>
+				<button type="default" @tap="go('../returns/returns')">退换货</button>
 			</view>
 			<view class="text" style="-webkit-flex: 1;flex: 1;">
 

@@ -2,8 +2,8 @@
 	<view class="y-body uni-flex uni-column">
 		<view class="uni-flex-item" >
 			<scroll-view   scroll-y="true" class="scroll-Y"  >
-				<search-add-procut class="scroll-view-item  "></search-add-procut>
-				<single-product class="scroll-view-item  "></single-product>
+				<search-add-procut class="scroll-view-item"></search-add-procut>
+				<single-product class="scroll-view-item"></single-product>
 			</scroll-view>
 		</view>
 		<view class="uni-inline-item uni-row-margin" style="-webkit-justify-content: flex-end;justify-content: flex-end;">
@@ -76,7 +76,7 @@
 <style lang="scss">
 	.scroll-Y {
 		// display: inline;
-		height: 1000upx;
+		// height: 1000upx;
 	}
 	.scroll-view-item {
 	}

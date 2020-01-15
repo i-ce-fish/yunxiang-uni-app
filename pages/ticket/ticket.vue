@@ -14,7 +14,7 @@
 			</view>
 		</view>
 		<uni-list>
-			<uni-list-item v-for="i in 4" :key="i" :show-arrow="false" @tap="goTicketDetail">
+			<uni-list-item v-for="i in 4" :key="i" :show-arrow="false" @tap="go('detail',i)">
 				<view class="uni-row-margin">
 					<view class="uni-flex uni-row" style="-webkit-justify-content: space-between;justify-content: space-between;">
 						<view class="text">
@@ -29,7 +29,7 @@
 							会员：123489
 						</view>
 						<view class="uni-flex-item ">
-							件数: {{i}} 
+							件数: {{i}}
 						</view>
 						<view class="uni-flex-item text-right ">
 							已支付: ￥99.9
@@ -91,6 +91,11 @@
 			},
 			bindDateChange: function(e) {
 				this.date = e.target.value
+			},
+			go(url, data) {
+				uni.navigateTo({
+					url: url
+				})
 			}
 		}
 	}

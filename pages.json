@@ -126,28 +126,30 @@
 			"path": "pages/product/search",
 			"style": {
 				"navigationBarTitleText": "查商品",
-				"app-plus": {  
-				            "titleNView": {  
-				                "buttons": [{  
-				                    "text": "\ue534",  
-				                    "fontSrc": "/static/uni.ttf",  
-				                    "fontSize": "26px"  
-				                }]  
-				            }  
-			}}
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "26px"
+						}]
+					}
+				}
+			}
 		}, {
 			"path": "pages/inventory/search",
 			"style": {
 				"navigationBarTitleText": "查库存",
 				"app-plus": {
-				            "titleNView": {  
-				                "buttons": [{  
-				                    "text": "\ue534",  
-				                    "fontSrc": "/static/uni.ttf",  
-				                    "fontSize": "26px"  
-				                }]  
-				            }
-			}}
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "26px"
+						}]
+					}
+				}
+			}
 		}, {
 			"path": "pages/product/detail",
 			"style": {
@@ -168,16 +170,21 @@
 			"style": {
 				"navigationBarTitleText": "小票记录"
 			}
+		}, {
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "测试组件"
+			}
+		}, {
+			"path": "pages/test/selectSex",
+			"style": {}
+		}, {
+			"path": "pages/ticket/detail",
+			"style": {
+				"navigationBarTitleText": "小票详情"
+			}
 		}
-	    ,{
-            "path" : "pages/test/test",
-            "style" : {				"navigationBarTitleText": "测试组件"}
-        }
-        ,{
-            "path" : "pages/test/selectSex",
-            "style" : {}
-        }
-    ],
+	],
 	// "tabBar": {
 	// 	"color": "#7a7e83",
 	// 	"selectedColor": "#0faeff",

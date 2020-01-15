@@ -54,10 +54,6 @@
 
 		</view>
 
-		<view class="uni-row y-center-hor y-margin-bottom">
-			<uni-pagination :show-icon="true" :total="50" title="标题文字" />
-		</view>
-
 	</view>
 </template>
 

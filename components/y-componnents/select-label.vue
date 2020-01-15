@@ -4,7 +4,9 @@
 			名称
 		</view>
 		<view class="uni-list-cell-db uni-flex input-wrapper">
-			<input type="text" class="input-value" value="" placeholder="商品" />
+			<view class="value">
+				{{value}}
+			</view>
 			<view class="icon"></view>
 		</view>
 	</view>
@@ -14,7 +16,8 @@
 	export default {
 		data() {
 			return {
-				showPassword: true
+				showPassword: true,
+				value:"placeholder"
 			};
 		}
 	}
@@ -29,15 +32,15 @@
 		position: relative;
 	}
 
-	.input-value {
+	.value {
 		/* single-input */
-		height: 50upx;
-		padding: 10upx 25upx;
-		margin: 10rpx 0;
-		line-height: 50upx;
-		font-size: 28upx;
-		background: #FFF;
-		flex: 1;
+		// height: 50upx;
+		// padding: 10upx 25upx;
+		// margin: 10rpx 0;
+		// line-height: 50upx;
+		// font-size: 28upx;
+		// background: #FFF;
+		// flex: 1;
 
 		/* border */
 		/* double-input */

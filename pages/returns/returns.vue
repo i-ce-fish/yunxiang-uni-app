@@ -1,7 +1,8 @@
 <template>
 	<view class="y-body-list">
 		<view>
-			<uni-segmented-control class="y-margin" active-color="#007aff" style-type="button" :current="current" :values="items" @clickItem="onClickItem"></uni-segmented-control>
+			<uni-segmented-control class="y-margin" active-color="#007aff" style-type="button" :current="current" :values="items"
+			 @clickItem="onClickItem"></uni-segmented-control>
 			<view v-show="current === 0">
 				<uni-search-bar placeholder="小票单号" @confirm="search"></uni-search-bar>
 			</view>
@@ -71,18 +72,13 @@
 							会员：1234567789
 						</view>
 						<view class="uni-flex-item text-right ">
-							件数: 1 实付: ￥99.99
+							件数: 1 金额: ￥99.99
 						</view>
+
 					</view>
 				</view>
 			</uni-list-item>
 		</uni-list>
-
-<view class="uni-row y-center-hor y-margin-bottom" >
-				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
-		</view>
-		
-
 	</view>
 </template>
 

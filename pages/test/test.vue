@@ -20,7 +20,26 @@
 		</view>
 
 		<view class="uni-list">
-			<view style="height: 200rpx;" class="uni-list-cell y-list-cell">
+			字体尺寸示例:当前字体大小{{fontSize}}rpx,当前边距大小{{padding}}rpx
+			<view class="uni-flex uni-row-margin">
+				<button class="uni-flex-item" type="primary" plain="true" @tap="add">加大字体</button>
+				<button class="uni-flex-item" type="primary" plain="true" @tap="dec">减少字体</button>
+			</view>
+			<view class="uni-flex uni-row-margin">
+				<button class="uni-flex-item" type="primary" plain="true" @tap="addP">加大边距</button>
+				<button class="uni-flex-item" type="primary" plain="true" @tap="decP">减少边距</button>
+			</view>
+			<view class="y-row-split">
+			</view>
+			<view :style="{fontSize:fontSize+'rpx',padding:padding+'rpx'}">
+				字体尺寸示例字体尺寸示例字体示例字体尺寸示例字体示例字体尺寸示例字体尺字体尺寸示例字体尺寸示例字体尺寸示例寸示例字体尺寸示例字体尺寸示例字体尺寸示例123456789123456789123456789123456789123456789123456789asjfhksjrwerioszsdlfjxcvwoieutsdksadfkljxcvbjksfsjkdhf
+			</view>
+			<view class="y-row-split">
+			</view>
+		</view>
+
+		<view class="uni-list">
+			<view class="uni-list-cell y-list-cell">
 				<input-label label="名称" :requireStar="true"></input-label>
 			</view>
 			<view class="uni-list-cell y-list-cell">
@@ -69,7 +88,9 @@
 		data() {
 			return {
 				show: false,
-				name: "名称:"
+				name: "名称:",
+				fontSize: 30,
+				padding: 30
 			};
 		},
 		mounted() {
@@ -79,6 +100,18 @@
 		methods: {
 			test() {
 				this.$refs.popup.open()
+			},
+			add() {
+				this.fontSize++
+			},
+			dec() {
+				this.fontSize--
+			},
+			addP() {
+				this.padding++
+			},
+			decP() {
+				this.padding--
 			}
 		}
 	}
