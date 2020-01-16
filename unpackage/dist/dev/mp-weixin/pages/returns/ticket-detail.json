@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "收银服务-小票详情",
-  "usingComponents": {
-    "single-select-product": "/components/y-componnents/pos/single-select-product"
-  }
-}

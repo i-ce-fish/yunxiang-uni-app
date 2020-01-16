@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "notice-bar-popup": "/components/y-componnents/notice-bar/notice-bar-popup"
-  }
-}

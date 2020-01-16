@@ -1,5 +1,5 @@
 <template>
-	<view class="y-body-bg">
+	<view class="container">
 		<search></search>
 
 		<picker-label></picker-label>
@@ -18,7 +18,6 @@
 			<inputLabelTemp></inputLabelTemp>
 			<selectLabel @tap="go('selectSex')"></selectLabel>
 		</view>
-
 		<view class="uni-list">
 			字体尺寸示例:当前字体大小{{fontSize}}rpx,当前边距大小{{padding}}rpx
 			<view class="uni-flex uni-row-margin">
@@ -70,6 +69,7 @@
 	import inputLabelTemp from '../../components/y-componnents/input-label-1.vue'
 	import selectLabel from '../../components/y-componnents/select-label.vue'
 	import yInput from '../../components/y-componnents/y-input.vue'
+	import tui from '../../components/button/button.vue'
 	export default {
 		components: {
 			selectLabel,
@@ -83,7 +83,7 @@
 			yTime,
 			yTimeInterval,
 			inputLabelTemp,
-			yInput
+			yInput,tui
 		},
 		data() {
 			return {

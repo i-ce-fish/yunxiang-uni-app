@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "收银服务-添加商品",
-  "usingComponents": {
-    "single-product": "/components/y-componnents/pos/single-product",
-    "search-add-procut": "/components/y-componnents/pos/search-add-product"
-  }
-}

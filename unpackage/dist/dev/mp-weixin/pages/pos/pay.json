@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "收银服务-支付",
-  "usingComponents": {
-    "notice-bar-member-detail": "/components/y-componnents/notice-bar/notice-bar-member-detail",
-    "uni-list": "/components/uni-list/uni-list",
-    "uni-list-item": "/components/uni-list-item/uni-list-item"
-  }
-}

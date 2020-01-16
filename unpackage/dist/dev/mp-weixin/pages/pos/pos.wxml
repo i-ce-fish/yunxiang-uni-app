@@ -1,1 +1,0 @@
-<view>首页<button data-event-opts="{{[['tap',[['goPosStart',['$event']]]]]}}" bindtap="__e">开始收银</button></view>
