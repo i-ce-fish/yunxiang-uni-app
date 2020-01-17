@@ -17,7 +17,7 @@
 			};
 		},methods:{
 			scan() {
-				// todo BUG  不可用的
+				
 				uni.scanCode({
 					onlyFromCamera: true,
 					success: function(res) {

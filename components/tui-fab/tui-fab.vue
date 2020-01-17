@@ -13,7 +13,12 @@
 			</view>
 			<view class="tui-fab-item" :class="{'tui-active':isOpen}" :style="{width:width+'rpx',height:height+'rpx',borderRadius:radius,background:bgColor,color:color}"
 			 @tap.stop="handleClick(-1)">
-				<view class="tui-fab-icon tui-icon-plus"></view>
+				<view class="" v-if="text">
+					<view >{{text}}</view>
+				</view>
+				<view class="" v-else>
+					<view class="tui-fab-icon tui-icon-plus"></view>
+				</view>
 			</view>
 		</view>
 		<view class="tui-fab-mask" :class="{'tui-visible':isOpen}" @tap="handleClickCancel"></view>
@@ -25,6 +30,11 @@
 	export default {
 		name: "tuiFab",
 		props: {
+			// 按钮文本内容
+			text:{
+				type:String,
+				default:""
+			},
 			//rpx 为0时值为auto
 			left: {
 				type: Number,

@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dabb70d4-53dd-4bed-a751-5127d0d8c62d" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/news-search/news-search.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/yunxiang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yunxiang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/tui-fab/tui-fab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/tui-fab/tui-fab.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/y-componnents/pos/search-add-product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/y-componnents/pos/search-add-product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pos/add-product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pos/add-product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pos/member-info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pos/member-info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pos/settlement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pos/settlement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/thorui.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/thorui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/app-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/app-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/app-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/app-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/static/style/thorui.css" beforeDir="false" afterPath="$PROJECT_DIR$/unpackage/dist/dev/app-plus/static/style/thorui.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +55,9 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1W5m22gwlTTPPc3scGP7grMSk1X" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -67,6 +78,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\binyu\Documents\HBuilderProjects\yunxiang" />
+      <recent name="C:\Users\binyu\Documents\HBuilderProjects\yunxiang\components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -94,6 +106,8 @@
       <workItem from="1578447620561" duration="2300000" />
       <workItem from="1578573265508" duration="3075000" />
       <workItem from="1578576902030" duration="209000" />
+      <workItem from="1579229177223" duration="1194000" />
+      <workItem from="1579268462665" duration="249000" />
     </task>
     <task id="LOCAL-00001" summary="yunxiang  uni-app  init">
       <created>1578574846755</created>
@@ -178,10 +192,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="remove" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="521" y="202" key="#Notifications" timestamp="1578574884554">
+    <state x="521" y="202" key="#Inspections" timestamp="1579230371223">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="521" y="202" key="#Inspections/0.0.1858.1080/-1920.8.1920.1040@0.0.1858.1080" timestamp="1579230371223" />
+    <state x="521" y="202" key="#Notifications" timestamp="1579229514298">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="521" y="202" key="#Notifications/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578574884554" />
+    <state x="521" y="202" key="#Notifications/0.0.1858.1080/-1920.8.1920.1040@0.0.1858.1080" timestamp="1579229514298" />
     <state x="498" y="136" key="CommitChangelistDialog2" timestamp="1578577017935">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -190,10 +209,11 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="168" y="96" key="DiffContextDialog/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578574999376" />
-    <state x="709" y="298" key="FileChooserDialogImpl" timestamp="1578575117556">
+    <state x="709" y="298" key="FileChooserDialogImpl" timestamp="1579268465949">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="709" y="298" key="FileChooserDialogImpl/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575117556" />
+    <state x="709" y="298" key="FileChooserDialogImpl/0.0.1858.1080/-1920.8.1920.1040@0.0.1858.1080" timestamp="1579268465949" />
     <state x="432" y="185" key="SettingsEditor" timestamp="1578448550151">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -210,5 +230,9 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="620" y="342" key="git4idea.merge.GitPullDialog/-1440.0.1378.900/0.0.1858.1080@0.0.1858.1080" timestamp="1578575418408" />
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579230175566">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/-1920.8.1920.1040@0.0.1858.1080" timestamp="1579230175566" />
   </component>
 </project>

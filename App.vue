@@ -18,7 +18,7 @@
 	/* @import "components/m-icon/m-icon.css"; */
 
 	/* todo remove uni.css*/
-	@import './common/uni.css';
+	/* @import './common/uni.css'; */
 	@import "./common/app.css";
 	@import './static/style/thorui.css';
 </style>
