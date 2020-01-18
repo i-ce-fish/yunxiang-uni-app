@@ -10,6 +10,7 @@ import store from './store'
 // ThorUI
 	import tuiListView from "@/components/list-view/list-view"
 	import tuiListCell from "@/components/list-cell/list-cell"
+	import tuiButton from "@/components/extend/button/button"
 Vue.config.productionTip = false
 
 Vue.prototype.$store = store
@@ -23,6 +24,7 @@ App.mpType = 'app'
 
 Vue.component('tuiListView', tuiListView)
 Vue.component('tuiListCell', tuiListCell)
+Vue.component('tuiButton', tuiButton)
 
 // 全局混入
 Vue.mixin({

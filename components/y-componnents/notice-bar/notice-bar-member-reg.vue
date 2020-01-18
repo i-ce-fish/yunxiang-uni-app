@@ -1,27 +1,23 @@
 <template>
 	<view>
-		<notice-bar-popup :noticeText="noticeText">
-			<template slot="content">
-				<view>
-					会员注册
-				</view>
+		<notice-bar>
+			<template>
+				<!-- todo  注册会员 -->
 			</template>
-		</notice-bar-popup>
+		</notice-bar>
 	</view>
 </template>
 
 <script>
-	import noticeBarPopup from "./notice-bar-popup.vue"
+	import noticeBar from './notice-bar.vue'
 
 	export default {
 		components: {
-			noticeBarPopup
+			noticeBar
 		},
 		props: {},
 		data() {
-			return {
-				noticeText: "noticeText"
-			}
+			return {}
 		},
 		methods: {
 

@@ -12,6 +12,7 @@
 				<tui-icon name="sweep" :size='16' color='#999' @tap="scan"></tui-icon>
 			</view>
 		</view>
+		<tui-button class="btn" width="120rpx" height="60rpx" shape="circle" type="blue">搜索</tui-button>
 	</view>
 </template>
 
@@ -42,11 +43,14 @@
 
 <style lang="scss">
 	.tui-searchbox {
+		display: flex;
 		padding: 16rpx 20rpx;
 		box-sizing: border-box;
 	}
 
 	.tui-rolling-search {
+		flex: 1;
+		
 		width: 100%;
 		height: 60rpx;
 		border-radius: 35rpx;
@@ -63,5 +67,9 @@
 		flex: 1;
 		color: #333;
 		padding: 0 16upx;
+	}
+
+	.btn{
+		margin-left: 30rpx;
 	}
 </style>

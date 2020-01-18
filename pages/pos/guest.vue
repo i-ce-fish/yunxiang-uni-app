@@ -69,10 +69,7 @@
 		flex: 1;
 	}
 
-	.tui-btn-box {
-		padding: 40rpx 50rpx;
-		box-sizing: border-box;
-	}
+
 
 	.btn-gray {
 		margin-top: 30rpx;

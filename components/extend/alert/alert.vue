@@ -33,7 +33,7 @@
 			//按钮字体颜色
 			btnColor: {
 				type: String,
-				default: "#EB0909"
+				default: "#333333"
 			},
 			btnText:{
 				type: String,
@@ -42,7 +42,7 @@
 			//点击遮罩 是否可关闭
 			maskClosable: {
 				type: Boolean,
-				default: false
+				default: true
 			}
 		},
 		methods: {

@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<!-- <view>
 		<notice-bar-member-detail></notice-bar-member-detail>
 		<view class="y-body">
 			<view class="uni-row">
@@ -57,49 +57,50 @@
 			</view>
 
 		</view>
+	</view> -->
+	<view class="container">
+		<notice-bar-member-detail></notice-bar-member-detail>
+		<tui-list-view title="支付信息" color="#777" class="tui-list-view">
+			<tui-list-cell class="tui-flex tui-align-between" :hover="false">
+					<view class="">
+						零售单号
+					</view>
+					<view class="">
+						尚需支付: 123.12
+					</view>
+ 			</tui-list-cell>
+			<tui-list-cell :hover="false">
+				不带箭头，无点击效果
+			</tui-list-cell>
+			<tui-list-cell :hover="false">
+				不带箭头，无点击效果
+			</tui-list-cell>
+		</tui-list-view>
+		<tui-list-view title="优惠信息" color="#777" class="tui-list-view">
+			<tui-list-cell :hover="false">
+				不带箭头，无点击效果
+			</tui-list-cell>
+			<tui-list-cell :hover="false">
+				不带箭头，无点击效果
+			</tui-list-cell>
+			<tui-list-cell :hover="false">
+				不带箭头，无点击效果
+			</tui-list-cell>
+		</tui-list-view>
 	</view>
 </template>
 
 <script>
 	import noticeBarMemberDetail from "../../components/y-componnents/notice-bar/notice-bar-member-detail.vue"
-	import uniList from "@/components/uni-list/uni-list.vue"
-	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	export default {
 		components: {
 			noticeBarMemberDetail,
-			uniList,
-			uniListItem
 		},
 		data() {
-			return {
-				noHover: "",
-				array: [{
-					name: '现金'
-				}, {
-					name: '微信'
-				}, {
-					name: '支付'
-				}, {
-					name: '储值卡'
-				}, {
-					name: '信用卡'
-				}],
-				index: 0,
-			};
+			return {}
 		},
 		methods: {
-			bindPickerChange: function(e) {
-				console.log('picker发送选择改变，携带值为：' + e.target.value)
-				this.index = e.target.value
-			},
-			addOrder() {
-				console.log('addOrder')
-			},goTicket
-			(){
-				uni.navigateTo({
-					url:"./ticket"
-				})
-			}
+
 		}
 	}
 </script>

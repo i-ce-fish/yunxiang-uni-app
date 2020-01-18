@@ -1,77 +1,6 @@
 <template>
 	<view class="container">
-		<!-- todo be components -->
-		<view class='tui-notice-board' @tap="showAlert">
-			<view class="tui-icon-bg">
-				<tui-icon name="news-fill" :size='24' color='#f54f46'></tui-icon>
-			</view>
-			<view class="tui-scorll-view">
-				<view class="tui-notice ">会员13611605568，三级，优惠券2张，储值卡¥290，生日1994年10月20日。推荐人五级</view>
-			</view>
-		</view>
-		<!--alert-->
-		<tui-alert :show="show" @click="hideAlert" @cancel="hideAlert" :maskClosable="maskClosable" :btnColor="btnColor"
-		 :color="color" :btnText="btnText">
-			<!-- TODO  SLOT -->
-			<view class="tui-flex tui-align-between ">
-				<view>
-					会员
-				</view>
-				<view>
-					杨先生
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					手机
-				</view>
-				<view>
-					13611605568
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					生日
-				</view>
-				<view>
-					1988/08/08
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					会员等级
-				</view>
-				<view style="color: #D53912;">
-					三级
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					积分
-				</view>
-				<view>
-					123分
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					卡券
-				</view>
-				<view>
-					31张
-				</view>
-			</view>
-			<view class="tui-flex tui-align-between ">
-				<view>
-					储值卡
-				</view>
-				<view>
-					123456元
-				</view>
-			</view>
-
-
-		</tui-alert>
+		<notice-bar-member-detail></notice-bar-member-detail>
 
 		<searchBar></searchBar>
 		<view class="tui-product-list">
@@ -126,7 +55,13 @@
 		</view>
 		<view class="tui-tabbar">
 			<view class="tui-checkAll">
-				<view class="tui-total-price">合计:<text class="tui-bold">￥800</text> </view>
+				<!-- <view class="tui-total-price">合计:<text class="tui-bold">￥800</text> </view> -->
+				<view class="tui-flex">
+					<view class="">合计: </view>
+					<view class="y-color-red">￥</view>
+					<view class="tui-price-large y-color-red">1192</view>
+					<view class="y-color-red">.00</view>
+				</view>
 			</view>
 			<view>
 				<tui-button width="200rpx" height="70rpx" :size="30" type="danger" shape="circle" @click="go('settlement')">去结账(9)</tui-button>
@@ -136,45 +71,24 @@
 </template>
 
 <script>
-	import searchBar from '../../components/y-componnents/search-bar/search-bar.vue'
-	import tuiButton from "@/components/extend/button/button"
 	import tuiFab from "@/components/tui-fab/tui-fab"
 	import tuiIcon from "@/components/icon/icon"
-	import tuiAlert from "@/components/extend/alert/alert"
-
+	import searchBar from "../../components/y-componnents/search-bar/search-bar.vue"
+	import noticeBarMemberDetail from "../../components/y-componnents/notice-bar/notice-bar-member-detail.vue"
 	export default {
 		components: {
-			searchBar,
-			tuiButton,
 			tuiFab,
 			tuiIcon,
-			tuiAlert
-
+			searchBar,
+			noticeBarMemberDetail
 		},
 		data() {
 			return {
-				// alert
-				show: false,
-				maskClosable: false,
-				btnColor: "#EB0909",
-				color: "#333",
-				btnText: "确定"
+
 			};
 		},
 		methods: {
-			// alert
-			showAlert() {
-				this.btnText = "确定";
-				this.btnColor = "#EB0909";
-				this.color = "#333";
-				this.maskClosable = false;
-				this.btnColor = "#000";
-				this.maskClosable = true;
-				this.show = true
-			},
-			hideAlert() {
-				this.show = false
-			}
+
 		}
 
 	}
@@ -241,7 +155,7 @@
 		justify-content: space-between;
 		padding: 0 30rpx;
 		box-sizing: border-box;
-		font-size: 24rpx;
+		// font-size: 24rpx;
 		z-index: 99999;
 	}
 
@@ -269,35 +183,9 @@
 		font-size: 30rpx !important;
 	}
 
-	// noticeBar
-	.tui-notice-board {
-		width: 100%;
-		padding-right: 30upx;
-		box-sizing: border-box;
-		font-size: 28upx;
-		height: 60upx;
-		background: #fff8d5;
-		display: flex;
-		align-items: center;
-	}
-
-	.tui-icon-bg {
-		background: #fff8d5;
-		padding-left: 30upx;
-		position: relative;
-		z-index: 10;
-	}
-
-	.tui-icon-class {
-		margin-right: 12upx;
-	}
-
-	.tui-scorll-view {
-		flex: 1;
-		line-height: 1;
-		// 可以换行
-		// white-space: nowrap;
-		// overflow: hidden;
-		color: #f54f46;
+	.tui-price-large {
+		font-size: 34rpx;
+		line-height: 32rpx;
+		font-weight: 600;
 	}
 </style>

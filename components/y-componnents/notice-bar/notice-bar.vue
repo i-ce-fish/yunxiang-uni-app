@@ -1,29 +1,82 @@
 <template>
-	<uni-notice-bar showIcon="true" showGetMore="true" @tap="getMore" @getmore="getMore" single="true" :text="text"></uni-notice-bar>
+	<view>
+		<view class='tui-notice-board' @tap="showAlert">
+			<view class="tui-icon-bg">
+				<tui-icon name="news-fill" :size='24' color='#de8c17'></tui-icon>
+			</view>
+			<view class="tui-scorll-view">
+				<view class="tui-notice ">会员13611605568，三级，优惠券2张，储值卡¥290，生日1994年10月20日。推荐人五级</view>
+			</view>
+		</view>
+		<!--alert-->
+		<tui-alert :show="show" @click="hideAlert" @cancel="hideAlert"  >
+			<slot></slot>
+		</tui-alert>
+	</view>
 </template>
 
 <script>
-	import uniNoticeBar from '@/components/uni-notice-bar/uni-notice-bar.vue'
+	import tuiAlert from "@/components/extend/alert/alert"
+	import tuiIcon from "@/components/icon/icon"
+
 	export default {
-		props: {
-			text: String
-		},
 		components: {
-			uniNoticeBar
+			tuiAlert,
+			tuiIcon
 		},
+		props: {},
 		data() {
 			return {
-
+				// alert
+				show: false,
 			}
 		},
 		methods: {
-			getMore() {
-				this.$emit('getMore')
+			// alert
+			showAlert() {
+				this.show = true
+			},
+			hideAlert() {
+				this.show = false
 			}
 		}
 	}
 </script>
 
 <style>
+	/*  noticeBar */
+	.tui-notice-board {
+		width: 100%;
+		padding-right: 30upx;
+		box-sizing: border-box;
+		font-size: 28upx;
+		height: 80upx;
+		background: #fff8d5;
+		display: flex;
+		align-items: center;
+	}
 
+	.tui-icon-bg {
+		background: #fff8d5;
+		padding-left: 30upx;
+		position: relative;
+		z-index: 10;
+	}
+
+	.tui-icon-class {
+		margin-right: 12upx;
+	}
+
+	.tui-scorll-view {
+		flex: 1;
+		line-height: 1;
+		/* 可以换行 */
+		/* white-space: nowrap; */
+		/* overflow: hidden; */
+		color: #de8c17;
+	}
+	
+	.tui-notice{
+		line-height: 35rpx;
+	}
 </style>

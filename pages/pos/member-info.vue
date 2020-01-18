@@ -56,21 +56,16 @@
 					</view>
 				</view>
 			</view>
-
-			<view class="tui-list-cell">
-				<tui-button type="blue" shape="circle" @click="go('add-product')">开始收银</tui-button>
-			</view>
 		</view>
-
+		<view class="tui-btn-box">
+			<tui-button type="blue" shape="circle" @click="go('add-product')">开始收银</tui-button>
+		</view>
 	</view>
 </template>
 
 <script>
-	import tuiButton from "@/components/extend/button/button"
 	export default {
-		components: {
-			tuiButton
-		},
+		components: {},
 		data() {
 			return {
 
@@ -92,4 +87,5 @@
 	.tui-input {
 		padding-left: 20rpx;
 	}
+ 
 </style>
