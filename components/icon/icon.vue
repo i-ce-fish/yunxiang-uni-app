@@ -62,8 +62,11 @@
 		color: #999;
 		vertical-align: middle;
 		line-height: 1;
-		padding-top: -1px;
-		margin-bottom: 1px;
+		/*2020/01/22  未知作用，所以删除，
+		而且padding-top不能为负值，margin-bottom1px偏差，
+		导致list边框无法显示*/
+		/*padding-top: -1px;*/
+		/*margin-bottom: 1px;*/
 	}
 
 	.tui-icon-friendadd:before {

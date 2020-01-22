@@ -11,6 +11,9 @@ page {
 	/* font-size: 32rpx; */
 }
 
+.y-href{
+	color:#5677fc;
+}
 .container {
 	display: flex;
 	flex-direction: column;
