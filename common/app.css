@@ -1,8 +1,14 @@
 /*app.wxss*/
 
-/* todu 不知道哪里被设置成了32rpx */
 uni-input {
+/* todu 不知道哪里被设置成了32rpx */
 	font-size: 30rpx;
+/*
+重置默认样式
+默认值为1.4rem
+*/
+	height:unset;
+	min-height:unset;
 }
 
 page {
@@ -126,4 +132,17 @@ button::after {
 /* 大一点的字体 */
 .y-font-large {
 	font-size: 32rpx;
+}
+
+/*表单样式*/
+.y-form-item{
+	display: flex;
+	width:100%;
+}
+.y-form-item .label{
+	width:25%;
+	padding-right:20rpx;
+}
+.y-form-item .value{
+
 }

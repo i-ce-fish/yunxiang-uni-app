@@ -2,23 +2,48 @@
 	<view class="container">
 		<view class="header tui-flex">
 			<view class=" tui-col-6">
-				<tui-list-cell @click="detail" :hover="false">
-					姓名: 123
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>姓名
+						</view>
+						<view>123</view>
+					</view>
 				</tui-list-cell>
-				<tui-list-cell @click="detail" :hover="false">
-					手机: 12345678901
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>手机
+						</view>
+						<view>12345678901</view>
+					</view>
+
 				</tui-list-cell>
-				<tui-list-cell @click="detail" :hover="false">
-					会员等级: 1
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>会员等级
+						</view>
+						<view>123</view>
+					</view>
 				</tui-list-cell>
-				<tui-list-cell @click="detail" :hover="false">
-					性别: 男
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>性别
+						</view>
+						<view>男</view>
+					</view>
 				</tui-list-cell>
-				<tui-list-cell @click="detail" :hover="false">
-					积分: 223
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>积分
+						</view>
+						<view>123</view>
+					</view>
 				</tui-list-cell>
-				<tui-list-cell @click="detail" :hover="false">
-					卡券: 2
+				<tui-list-cell  :hover="false">
+					<view class="tui-flex   tui-align-between tui-col-12">
+						<view>卡券
+						</view>
+						<view>123</view>
+					</view>
 				</tui-list-cell>
 			</view>
 			<view class="tui-flex tui-col-6">
@@ -38,14 +63,26 @@
 				</tui-list-cell>
 				<view class="tui-flex">
 					<view class=" tui-col-6">
-						<tui-list-cell @click="detail" :hover="false">
-							分享人姓名: 123
+						<tui-list-cell  :hover="false">
+							<view class="tui-flex   tui-align-between tui-col-12">
+								<view>分享人姓名
+								</view>
+								<view>123</view>
+							</view>
 						</tui-list-cell>
-						<tui-list-cell @click="detail" :hover="false">
-							分享人会员等级: 1
+						<tui-list-cell  :hover="false">
+							<view class="tui-flex   tui-align-between tui-col-12">
+								<view>分享人会员等级
+								</view>
+								<view>123</view>
+							</view>
 						</tui-list-cell>
-						<tui-list-cell @click="detail" :hover="false">
-							分享券: 2
+						<tui-list-cell  :hover="false">
+							<view class="tui-flex   tui-align-between tui-col-12">
+								<view>分享券
+								</view>
+								<view>123</view>
+							</view>
 						</tui-list-cell>
 					</view>
 					<view class=" tui-flex tui-col-6 ">
@@ -87,5 +124,5 @@
 	.tui-input {
 		padding-left: 20rpx;
 	}
- 
+
 </style>

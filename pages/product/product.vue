@@ -1,94 +1,58 @@
 <template>
-	<view class="y-body-list ">
-
-		<view class="y-margin">
-			<uni-grid :column="4" :showBorder="false">
-				<uni-grid-item>
-					<view @tap="go('add')" class="icon-item">
-						<uni-icons type="plus" size="30"></uni-icons>
-						<text class="icon-item-text">添加</text>
-					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view @tap="go('search')" class="icon-item">
-						<uni-icons type="search" size="30"></uni-icons>
-						<text class="icon-item-text">搜索</text>
-					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view class="icon-item">
-						<uni-icons type="more" size="30"></uni-icons>
-						<text class="icon-item-text">待定</text>
-					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view class="icon-item">
-						<uni-icons type="more" size="30"></uni-icons>
-						<text class="icon-item-text">待定</text>
-					</view>
-				</uni-grid-item>
-			</uni-grid>
-		</view>
-
-
-		<view class="uni-row-margin">
-			<uni-list>
-				<uni-list-item :title="'森马冬季羽绒服款(男款)'+i" :note='"款号:1234567890 品牌：美邦  2020冬" +i' v-for="i in 10" :key="i"
-				 :show-arrow="true" @tap="go('edit')">
-				</uni-list-item>
-			</uni-list>
-		</view>
-		<view class="uni-row y-center-hor y-margin-bottom">
-			<uni-pagination :show-icon="true" :total="50" title="标题文字" />
-		</view>
-
+	<view class="container">
+		<tui-list-view color="#777" class=" 	">
+			<y-grid :data-list="dataList"  @click="clickIcon"></y-grid>
+		</tui-list-view>
+		<tui-list-view title="商品信息" >
+			<tui-list-cell v-for="o in 10" :key="o" @click="go('detail')" :arrow="true">
+				<product-item></product-item>
+			</tui-list-cell>
+		</tui-list-view>
 	</view>
-
-
 </template>
 
 <script>
-	
-	import uniGrid from "@/components/uni-grid/uni-grid.vue"
-	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
-	import uniIcons from "@/components/uni-icons/uni-icons.vue"
-
+	import YGrid from "../../components/y-componnents/y-grid/y-grid";
+	import productItem from './com/product-item'
 	export default {
 		components: {
-		
-			uniGrid,
-			uniGridItem,
-			uniIcons
+			YGrid,
+			productItem
+
 		},
 		data() {
 			return {
+				dataList: [{
+					name: "添加商品",
+					size: 30,
+					icon:"plus",
+					url:'add'
+				}, {
+					name: "搜索",
+					size: 30,
+					icon:"search",
+					url: 'search'
+
+				}, {
+					name: "待定",
+					size: 30,
+					icon:"more",
+
+				}, {
+					name: "待定",
+					size: 30,
+					icon:"more"
+				}]
 
 			};
 		},
 		methods: {
-			go(url) {
-				uni.navigateTo({
-					url: url
-				})
+			clickIcon(index) {
+				this.go(this.dataList[index].url)
 			}
 		}
 	}
 </script>
 
-<style lang="scss">
-	.icon-item {
-		/* #ifndef APP-NVUE */
-		display: flex;
-		box-sizing: border-box;
-		/* #endif */
-		width: 180rpx;
-		padding: 30rpx 10rpx;
-		text-align: center;
-		flex-direction: column;
-	}
-
-	.icon-item-text {
-		font-size: 24rpx;
-		text-align: center;
-	}
+<style>
 </style>

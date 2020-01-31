@@ -1044,8 +1044,10 @@
 	height: 64rpx;
 }
 
+/*相邻选择器*/
 .tui-grid-icon+.tui-grid-label {
-	margin-top: 10rpx;
+	/*binyu 导致后面的list-cell 边框部分不显示*/
+	/*margin-top: 10rpx;*/
 }
 
 .tui-grid-label {

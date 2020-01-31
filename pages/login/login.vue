@@ -3,11 +3,11 @@
 		<view class="input-group">
 			<view class="input-row border">
 				<text class="title">账号：</text>
-				<m-input class="m-input" type="text" clearable focus v-model="account" placeholder="请输入账号"></m-input>
+				<input class="m-input" type="text" clearable focus v-model="account" placeholder="请输入账号"></input>
 			</view>
 			<view class="input-row">
 				<text class="title">密码：</text>
-				<m-input type="password" displayable v-model="password" placeholder="请输入密码"></m-input>
+				<input type="password" displayable v-model="password" placeholder="请输入密码"></input>
 			</view>
 		</view>
 		<view class="btn-row">
@@ -35,14 +35,12 @@
 		mapState,
 		mapMutations
 	} from 'vuex'
-	import mInput from '../../components/m-input.vue'
 	import {
 		login
 	} from '../../api/user.js'
 
 	export default {
 		components: {
-			mInput
 		},
 		data() {
 			return {
@@ -69,11 +67,11 @@
 					uni.reLaunch({
 						url: '../main/main'
 					});
-					
+
 				})
-			
+
 			},
-			
+
 			initProvider() {
 				const filters = ['weixin', 'qq', 'sinaweibo'];
 				uni.getProvider({

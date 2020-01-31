@@ -3,9 +3,7 @@ import App from './App'
 
 import store from './store'
 
-// import uniPagination from '@/components/uni-pagination/uni-pagination.vue'
-// import uniList from "@/components/uni-list/uni-list.vue"
-// import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
+
 
 // ThorUI
 	import tuiListView from "@/components/list-view/list-view"
@@ -18,9 +16,10 @@ Vue.prototype.$store = store
 App.mpType = 'app'
 
 // todo remove
-// Vue.component('uniPagination', uniPagination)
-// Vue.component('uniList', uniList)
-// Vue.component('uniListItem', uniListItem)
+import uniList from "@/components/uni-list/uni-list.vue"
+import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
+Vue.component('uniList', uniList)
+Vue.component('uniListItem', uniListItem)
 
 Vue.component('tuiListView', tuiListView)
 Vue.component('tuiListCell', tuiListCell)
@@ -34,9 +33,17 @@ Vue.mixin({
 			uni.navigateTo({
 				url: url
 			})
+		},
+		toast: function(text, duration, success) {
+			uni.showToast({
+				title: text,
+				icon: success ? 'success' : 'none',
+				duration: duration || 2000
+			})
 		}
 	}
 })
+
 
 const app = new Vue({
 	store,
