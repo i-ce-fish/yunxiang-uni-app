@@ -68,26 +68,26 @@
 }
 
 /* 表单项 */
-.y-form-item {
-	height: 60rpx;
-	line-height: 60rpx;
-	padding: 20upx 0upx;
-	padding-left: 30upx;
+/*.y-form-item {*/
+/*	height: 60rpx;*/
+/*	line-height: 60rpx;*/
+/*	padding: 20upx 0upx;*/
+/*	padding-left: 30upx;*/
 	/* background-color: #FFFFFF; */
 	/*	 width: auto; */
 	/* border-bottom: 1px solid #ddd; */
-}
+/*}*/
 
 /* 表单组件 */
-.y-input {
-	height: 50upx;
-	padding: 10upx;
-	margin: 10rpx 25upx;
-	line-height: 50upx;
-	background: #FFF;
-	flex: 1;
-	border-bottom: 1px solid #007AFF;
-}
+/*.y-input {*/
+/*	height: 50upx;*/
+/*	padding: 10upx;*/
+/*	margin: 10rpx 25upx;*/
+/*	line-height: 50upx;*/
+/*	background: #FFF;*/
+/*	flex: 1;*/
+/*	border-bottom: 1px solid #007AFF;*/
+/*}*/
 
 /*通用 */
 view {

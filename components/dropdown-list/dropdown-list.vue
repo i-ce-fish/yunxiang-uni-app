@@ -53,14 +53,14 @@
 		position: absolute;
 		z-index: 9999;
 		left: 0;
-		/* opacity: 0; */
+		 opacity: 0;
 		visibility: hidden;
 		transition: all 0.2s ease-in-out;
 
 	}
 
 	.tui-dropdownlist-show {
-		/* opacity: 1; */
+		 opacity: 1;
 		visibility: visible;
 	}
 </style>
