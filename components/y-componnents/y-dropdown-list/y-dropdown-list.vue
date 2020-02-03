@@ -42,13 +42,13 @@
 				required: true
 			},
 			top: {
-				type: String,
-				default: "94",
+				type: Number,
+				default: 94,
 				required: false
 			},
 			height: {
-				type: String,
-				default: "500",
+				type: Number,
+				default: 500,
 				required: false
 			},
 		},

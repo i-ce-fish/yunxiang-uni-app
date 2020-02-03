@@ -6,7 +6,7 @@
 					<tui-icon name="search" :size='16' color='#999'>
 					</tui-icon>
 				</view>
-				<input class="tui-input " type="text" value="" placeholder="扫码/输入商品编号" />
+				<input class="tui-input " type="text" value="" :placeholder="placeholder" />
 			</view>
 			<view class="tui-icon-box  ">
 				<tui-icon name="sweep" :size='16' color='#999' @tap="scan"></tui-icon>
@@ -36,8 +36,11 @@
 					}
 				})
 			}
-		}
+		},
 
+		props: {
+			placeholder: {type: String, default: "扫码/输入", required: false}
+		}
 	}
 </script>
 
@@ -50,7 +53,7 @@
 
 	.tui-rolling-search {
 		flex: 1;
-		
+
 		width: 100%;
 		height: 60rpx;
 		border-radius: 35rpx;

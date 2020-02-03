@@ -2,7 +2,7 @@
 	<view class="container">
 		<notice-bar-member-detail></notice-bar-member-detail>
 
-		<searchBar></searchBar>
+		<searchBar placeholder="扫码/输入商品编号"></searchBar>
 		<view class="tui-product-list">
 			<view class="tui-product-container">
 				<block v-for="item in 6" :key="item">
@@ -73,7 +73,7 @@
 <script>
 	import tuiFab from "@/components/tui-fab/tui-fab"
 	import tuiIcon from "@/components/icon/icon"
-	import searchBar from "../../components/y-componnents/search-bar/search-bar.vue"
+	import searchBar from "../../components/y-componnents/search-bar/y-search-bar.vue"
 	import noticeBarMemberDetail from "../../components/y-componnents/notice-bar/notice-bar-member-detail.vue"
 	export default {
 		components: {

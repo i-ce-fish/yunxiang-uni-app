@@ -14,9 +14,12 @@ uni-input {
 page {
 	background: #fafafa;
 	font-size: 30rpx;
-	/* font-size: 32rpx; */
 }
+/*主动设置背景色*/
+.y-bgc{
+	background-color: #fafafa;
 
+}
 .y-href{
 	color:#5677fc;
 }

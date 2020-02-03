@@ -1,78 +1,67 @@
 <template>
-	<view class=" y-body-list  ">
-		<y-drawer :showDrawer=showDrawer @close="closeDrawer"></y-drawer>
-	 
-		<uni-search-bar placeholder="商品编号" @confirm="search"></uni-search-bar>
-		<view class="">
-			<view class="uni-row">
-				<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
-					<view @tap="getProduct(i)" :id="i" class="scroll-view-item_H" v-for="i in 6" :key="i">
-						<view class="uni-row">
-							<image style="width: 81px;height: 81px;" src="../../static/img/home.png" mode=""></image>
-						</view>
-						<view class="uni-row">
-							商品名称
-						</view>
-					</view>
-				</scroll-view>
-			</view>
-		</view>
-		<view class="uni-row-margin">
-			<uni-list>
-				<uni-list-item :title="'森马冬季羽绒服款(男款)'+i" :note='"款号:1234567890 品牌：美邦  2020冬" +i' v-for="i in 10" :key="i"
-				 :show-arrow="true" @tap="go('detail')">
-				</uni-list-item>
-			</uni-list>
-		</view>
-		<view class="uni-row y-center-hor y-margin-bottom" >
-				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
-		</view>
-		
+<!--	<view class=" y-body-list  ">-->
+<!--		<y-drawer :showDrawer=showDrawer @close="closeDrawer"></y-drawer>-->
+<!--	 -->
+<!--		<uni-search-bar placeholder="商品编号" @confirm="search"></uni-search-bar>-->
+<!--		<view class="">-->
+<!--			<view class="uni-row">-->
+<!--				<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">-->
+<!--					<view @tap="getProduct(i)" :id="i" class="scroll-view-item_H" v-for="i in 6" :key="i">-->
+<!--						<view class="uni-row">-->
+<!--							<image style="width: 81px;height: 81px;" src="../../static/img/home.png" mode=""></image>-->
+<!--						</view>-->
+<!--						<view class="uni-row">-->
+<!--							商品名称-->
+<!--						</view>-->
+<!--					</view>-->
+<!--				</scroll-view>-->
+<!--			</view>-->
+<!--		</view>-->
+<!--		<view class="uni-row-margin">-->
+<!--			<uni-list>-->
+<!--				<uni-list-item :title="'森马冬季羽绒服款(男款)'+i" :note='"款号:1234567890 品牌：美邦  2020冬" +i' v-for="i in 10" :key="i"-->
+<!--				 :show-arrow="true" @tap="go('detail')">-->
+<!--				</uni-list-item>-->
+<!--			</uni-list>-->
+<!--		</view>-->
+<!--		<view class="uni-row y-center-hor y-margin-bottom" >-->
+<!--				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />-->
+<!--		</view>-->
+<!--		-->
+<!--	</view>-->
+	<view class="container">
+		<y-search-bar class="y-bgc search-bar" placeholder="扫码/输入商品编号"></y-search-bar>
+<!--		自顶向下的下拉框， 使用时需要为穿越过的元素设置z-index-->
+		<yDropdownSelectMulti></yDropdownSelectMulti>
+		<tui-list-view title="商品信息" >
+			<tui-list-cell v-for="o in 10" :key="o" @click="go('detail')" :arrow="true">
+				<product-item></product-item>
+			</tui-list-cell>
+		</tui-list-view>
 	</view>
 </template>
 
 <script>
-	import yDrawer from '../../components/y-componnents/drawer/drawer.vue'
-	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
+	import ySearchBar from "../../components/y-componnents/search-bar/y-search-bar.vue"
+	import yDropdownSelectMulti from "../../components/y-componnents/y-dropdown-select-multi/y-dropdown-select-multi"
+	import productItem from './com/product-item'
+
 	export default {
 		components: {
-			yDrawer,uniSearchBar
-
+			ySearchBar,yDropdownSelectMulti,productItem
 		},
 		data() {
 			return {
-				showDrawer: false
 			};
 		},
 		methods: {
-			go(url) {
-				uni.navigateTo({
-					url: url
-				})
-			},
-			scroll() {},
-			onNavigationBarButtonTap() {
-				this.showDrawer = true
-			},
-			closeDrawer() {
-				this.$emit('close')
-			}
+
 		}
 	}
 </script>
 
 <style lang="scss">
-	.scroll-view_H {
-		white-space: nowrap;
-		width: 100%;
-	}
-
-	.scroll-view-item_H {
-		display: inline-block;
-		width: 30%;
-		height: 300upx;
-		line-height: 300upx;
-		text-align: center;
-		font-size: 36upx;
+	.search-bar {
+		z-index: 990;
 	}
 </style>

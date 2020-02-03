@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="top-dropdown">
 		<view class="tui-top-dropdown tui-dropdown-box" :class="[show?'tui-dropdown-show':'']" :style="{height:height?px(height):'auto', background: bgcolor,paddingBottom: px(paddingbtm),transform: 'translateZ(0) translateY('+(show?px(translatey):'-100%')+')'}">
 			<slot></slot>
 		</view>
@@ -56,10 +56,13 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	.top-dropdown{
+		position: relative;
+	}
 	.tui-dropdown-box {
 		width: 100%;
-		position: fixed;
+		position: absolute;
 		box-sizing: border-box;
 		border-bottom-right-radius: 24upx;
 		border-bottom-left-radius: 24upx;
@@ -75,21 +78,22 @@
 		visibility: visible;
 	}
 
-	.tui-dropdown-mask {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.6);
-		z-index: 986;
-		transition: all 0.3s ease-in-out;
-		opacity: 0;
-		visibility: hidden;
-	}
+	/*不需要遮罩*/
+	/*.tui-dropdown-mask {*/
+	/*	position: fixed;*/
+	/*	top: 0;*/
+	/*	left: 0;*/
+	/*	right: 0;*/
+	/*	bottom: 0;*/
+	/*	background: rgba(0, 0, 0, 0.6);*/
+	/*	z-index: 986;*/
+	/*	transition: all 0.3s ease-in-out;*/
+	/*	opacity: 0;*/
+	/*	visibility: hidden;*/
+	/*}*/
 
-	.tui-mask-show {
-		opacity: 1;
-		visibility: visible;
-	}
+	/*.tui-mask-show {*/
+	/*	opacity: 1;*/
+	/*	visibility: visible;*/
+	/*}*/
 </style>

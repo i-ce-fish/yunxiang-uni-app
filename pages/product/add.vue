@@ -18,49 +18,49 @@
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">品类</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<y-picker></y-picker>
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">商品名称</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">款号</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">采购模式</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">商品年份</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">经典常年</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">商品季</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">面料</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 				</tui-list-view>
@@ -69,13 +69,13 @@
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">原款号</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 					<tui-list-cell :hover="false">
 						<view class="y-form-item">
 							<view class="label">备注</view>
-							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入会员手机" maxlength="50" type="text" />
+							<input placeholder-class="phcolor" class="" name="name" placeholder="请输入" maxlength="50" type="text" />
 						</view>
 					</tui-list-cell>
 				</tui-list-view>
@@ -91,10 +91,12 @@
 <script>
 	import yDropdownList from '../../components/y-componnents/y-dropdown-list/y-dropdown-list.vue'
 	import yRadio from '../../components/y-componnents/y-radio/y-radio.vue'
+	import  yPicker from '../../components/y-componnents/y-picker/y-picker'
 	export default {
 		components: {
 			yDropdownList,
-			yRadio
+			yRadio,
+			yPicker
 		},
 		data() {
 			return {
