@@ -1,28 +1,34 @@
 /*app.wxss*/
 
-uni-input {
-/* todu 不知道哪里被设置成了32rpx */
-	font-size: 30rpx;
-/*
-重置默认样式
-默认值为1.4rem
-*/
-	height:unset;
-	min-height:unset;
-}
 
 page {
 	background: #fafafa;
 	font-size: 30rpx;
 }
+
+/*布局*/
+/*左右边距*/
+.y-padding {
+	padding: 0 30rpx;
+}
+
 /*主动设置背景色*/
 .y-bgc{
 	background-color: #fafafa;
-
 }
+/*字体颜色*/
+/*超链接颜色*/
+
 .y-href{
 	color:#5677fc;
 }
+/*次要文字颜色*/
+/*颜色*/
+.y-gray {
+	color: #999;
+}
+
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -149,3 +155,4 @@ button::after {
 .y-form-item .value{
 
 }
+
