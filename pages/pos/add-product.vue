@@ -73,7 +73,7 @@
 <script>
 	import tuiFab from "@/components/tui-fab/tui-fab"
 	import tuiIcon from "@/components/icon/icon"
-	import searchBar from "../../components/y-componnents/search-bar/y-search-bar.vue"
+	import searchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
 	import noticeBarMemberDetail from "../../components/y-componnents/notice-bar/notice-bar-member-detail.vue"
 	export default {
 		components: {

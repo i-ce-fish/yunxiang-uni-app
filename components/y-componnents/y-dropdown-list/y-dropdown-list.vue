@@ -2,7 +2,7 @@
 	<view class="y-dropdown-list">
 		<tui-dropdown-list :show="show" :top="top" :height="height">
 			<template v-slot:selectionbox>
-				<view class="y-href" @tap="showDropDownList">
+				<view class="y-color-href" @tap="showDropDownList">
 					{{result}}
 					<view class="tui-animation" :class="[show?'tui-animation-show':'']">
 						<tui-icon name="turningdown" :size="20"></tui-icon>

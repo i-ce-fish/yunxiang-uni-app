@@ -42,7 +42,7 @@
 </template>
 
 <script>
-	import ySearchBar from "../../components/y-componnents/search-bar/y-search-bar.vue"
+	import ySearchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
 	import yDropdownSelectMulti from "../../components/y-componnents/y-dropdown-select-multi/y-dropdown-select-multi"
 	import productItem from './com/product-item'
 

@@ -12,6 +12,8 @@ page {
 	padding: 0 30rpx;
 }
 
+/* 颜色统一 */
+
 /*主动设置背景色*/
 .y-bgc{
 	background-color: #fafafa;
@@ -19,14 +21,59 @@ page {
 /*字体颜色*/
 /*超链接颜色*/
 
-.y-href{
+.y-color-href{
 	color:#5677fc;
 }
 /*次要文字颜色*/
 /*颜色*/
-.y-gray {
-	color: #999;
+.y-color-gray {
+	color: #999999;
 }
+
+/* 用于未付款金额等的显示 */
+.y-color-red {
+	color: #f10000;
+}
+
+/* 用于已付款金额等的显示 */
+.y-color-greed {
+	color: #00aa00;
+}
+
+/*字体大小 默认为30rpx（15px）*/
+
+.y-font-xs{
+	font-size: 26rpx;
+}
+.y-font-s{
+	font-size: 28rpx;
+}
+.y-font-l{
+	font-size: 32rpx;
+}
+.y-font-xl{
+	font-size: 34rpx;
+}
+/*行高*/
+.y-line-height-full{
+	line-height: 100%;
+}
+
+/*表单样式*/
+.y-form-item{
+	display: flex;
+	width:100%;
+}
+.y-form-item .label{
+	width:25%;
+	padding-right:20rpx;
+}
+.y-form-item .value{
+
+}
+
+
+
 
 
 .container {
@@ -124,35 +171,5 @@ button::after {
 .btn-disabled {
 	color: #fafbfc !important;
 	background: linear-gradient(-90deg, #cad8fb, #c9d3fb);
-}
-
-/* 颜色统一 */
-
-/* 用于未付款金额等的显示 */
-.y-color-red {
-	color: #f10000;
-}
-
-/* 用于已付款金额等的显示 */
-.y-color-greed {
-	color: #00aa00;
-}
-
-/* 大一点的字体 */
-.y-font-large {
-	font-size: 32rpx;
-}
-
-/*表单样式*/
-.y-form-item{
-	display: flex;
-	width:100%;
-}
-.y-form-item .label{
-	width:25%;
-	padding-right:20rpx;
-}
-.y-form-item .value{
-
 }
 

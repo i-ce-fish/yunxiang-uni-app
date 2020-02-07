@@ -8,7 +8,7 @@
 				</view>
 				<input class="tui-input " type="text" value="" :placeholder="placeholder" />
 			</view>
-			<view class="tui-icon-box  ">
+			<view class="tui-icon-box" v-if="showScan">
 				<tui-icon name="sweep" :size='16' color='#999' @tap="scan"></tui-icon>
 			</view>
 		</view>
@@ -20,6 +20,11 @@
 	import tuiIcon from "@/components/icon/icon"
 
 	export default {
+		props: {
+			placeholder: {type: String, default: "扫码/输入", required: false},
+			showScan: {type: [String,Boolean], default: true, required: false}
+		},
+
 		components: {
 			tuiIcon
 		},
@@ -38,9 +43,7 @@
 			}
 		},
 
-		props: {
-			placeholder: {type: String, default: "扫码/输入", required: false}
-		}
+
 	}
 </script>
 

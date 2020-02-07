@@ -10,7 +10,7 @@
 					<view class="tui-drop-input-box  tui-col-8 ">
 						<tui-dropdown-list :show="o.dropdownShow" :top="94" :height="500">
 							<template v-slot:selectionbox>
-								<view class="y-href" @tap="dropDownList(i)">
+								<view class="y-color-href" @tap="dropDownList(i)">
 									{{o.label}}
 									<view class="tui-animation" :class="[o.dropdownShow?'tui-animation-show':'']">
 										<tui-icon name="turningdown" :size="20"></tui-icon>
@@ -43,10 +43,10 @@
 				</tui-list-cell>
 			</view>
 			<tui-list-cell class="tui-flex tui-align-between " :hover="false">
-				<view class="y-href" @tap="cutPayType">
+				<view class="y-color-href" @tap="cutPayType">
 					-取消组合
 				</view>
-				<view class="y-href" @tap="addPayType">
+				<view class="y-color-href" @tap="addPayType">
 					+组合收款
 				</view>
 			</tui-list-cell>

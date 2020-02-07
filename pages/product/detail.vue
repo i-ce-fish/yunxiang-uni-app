@@ -1,79 +1,3 @@
-<!--	<view class="y-body">-->
-
-<!--		<view class="uni-row">-->
-<!--			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">-->
-<!--				<view @tap="getProduct(i)" :id="i" class="scroll-view-item_H" v-for="i in 4" :key="i">-->
-<!--					<view class="uni-row">-->
-<!--						<image style="width: 81px;height: 81px;" src="../../static/img/home.png" mode=""></image>-->
-<!--					</view>-->
-
-<!--				</view>-->
-<!--			</scroll-view>-->
-<!--		</view>-->
-
-<!--		<view class="uni-row">-->
-<!--			<view class="uni-flex uni-row" style="-webkit-justify-content: space-between;justify-content: space-between;">-->
-<!--				<view class="text">商品名称</view>-->
-<!--				<view class="text">￥169</view>-->
-<!--			</view>-->
-
-<!--			<view class="uni-flex uni-row" style="-webkit-justify-content: space-between;justify-content: space-between;">-->
-<!--				<view class="text">款号：123456</view>-->
-<!--				<view class="text">2019夏</view>-->
-<!--				<view class="text">￥169</view>-->
-
-<!--			</view>-->
-
-<!--			<view class="uni-flex">-->
-<!--				<view class="uni-column">-->
-<!--					库存：123-->
-<!--				</view>-->
-<!--				<view class="uni-column">-->
-<!--					<text style="color: #0FAEFF;" @tap="go('../inventory/search')">详情</text>-->
-<!--				</view>-->
-<!--			</view>-->
-<!--		</view>-->
-<!--		<view class="uni-row-margin">-->
-<!--			标签信息-->
-<!--		</view>-->
-<!--		<view class="uni-row-margin">-->
-<!--			<view class="uni-flex uni-row" style="-webkit-justify-content: center;justify-content: center;">-->
-<!--				<view class="">-->
-<!--					图文详情-->
-<!--				</view>-->
-<!--			</view>-->
-<!--			<view class="" v-for="i in 4" :key=i>-->
-<!--				<image src="../../static/img/qq.png" mode="aspectFit"></image>-->
-<!--			</view>-->
-<!--		</view>-->
-<!--		<view class="uni-row-margin">-->
-<!--			商品详细信息-->
-<!--			<view class="uni-row">-->
-<!--				品牌-->
-<!--			</view>-->
-<!--			<view class="uni-row">-->
-<!--				款名-->
-<!--			</view>-->
-<!--			<view class="uni-row">-->
-<!--				分类-->
-<!--			</view>-->
-<!--			<view class="uni-row">-->
-<!--				系列-->
-<!--			</view>-->
-<!--			<view class="性别">-->
-<!--				男款-->
-<!--			</view>-->
-<!--		</view>-->
-<!--		<view class="uni-row-margin">-->
-<!--			卖点-->
-<!--			<view class="">-->
-<!--				<textarea value="" placeholder="请描述卖点" />-->
-<!--			</view>-->
-<!--		</view>-->
-<!--		<view class="uni-row-margin">-->
-<!--			星级-->
-<!--		</view>-->
-<!--	</view>-->
 <template>
 	<view class="container ">
 		<!--banner-->
@@ -82,14 +6,23 @@
 		<view class="tui-pro-detail">
 			<view class="tui-product-title tui-border-radius">
 
-				<view class="tui-pro-titbox">
-					<view class="pro-title">谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉 个性水滴耳环【A2】</view>
+				<view class="tui-pro-titbox tui-flex ">
+					<view class="pro-title tui-col-10">谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉</view>
+					<view class="pro-price tui-align-center ">￥99.99</view>
 				</view>
 				<view class="y-padding">
-					<view class="tui-sale-info tui-size y-gray">
-						<view>快递：0.00</view>
-						<view>月销2000</view>
-						<view>浙江杭州</view>
+					<view class="tui-sale-info  y-font-s  y-color-gray">
+							<view class="text">款号：123456</view>
+							<view class="text">2019夏</view>
+<!--						todo -->
+							<view class="text y-color-href" @tap="go()">库存: 123</view>
+					</view>
+					<view class="pro-label">
+						<view class="item"  v-for="(o,i) of 5">
+<!--							todo random color-->
+<!--							todo  新增编辑标签-->
+							<tui-tag size="small" :plain="true" type="high-green" shape="circle" >标签{{i}}</tui-tag>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -97,24 +30,46 @@
 			<view class="tui-cmt-box tui-mtop tui-radius-all">
 				<view class="tui-list-cell tui-last tui-between">
 					<view class="tui-bold  tui-col-12">详细信息</view>
-
 				</view>
-				<view class="more-info-box">
+				<view class="more-info-box y-font-xs">
 					<view class="tui-flex tui-align-between item">
-						<view>名称</view>
-						<view>name</view>
+						<view>品牌</view>
+						<view>森马</view>
 					</view>
 					<view class="tui-flex tui-align-between item">
-						<view>name</view>
-						<view>name</view>
+						<view>款名</view>
+						<view>潮流范冰冰同款</view>
 					</view>
 					<view class="tui-flex tui-align-between item">
-						<view>name</view>
-						<view>name</view>
+						<view>分类</view>
+						<view>羽绒</view>
+					</view>
+					<view class="tui-flex tui-align-between item">
+						<view>系列</view>
+						<view>系列</view>
+					</view>
+					<view class="tui-flex tui-align-between item">
+						<view>性别</view>
+						<view>男款</view>
 					</view>
 				</view>
 			</view>
+			<view class="tui-cmt-box tui-mtop tui-radius-all">
+				<view class="tui-list-cell tui-last tui-between">
+					<view class="tui-bold  tui-col-12">卖点</view>
+				</view>
 
+				<view class="sell-point-box  y-padding">
+					<view class="item">
+					<view class="">
+<!--						todo 头像图片-->
+						<view>用户名:1235631</view>
+					</view>
+					<view class="item">卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖</view>
+					</view>
+				</view>
+<!--				todo 新增编辑  卖点-->
+			</view>
 			<view class="tui-nomore-box">
 				<tui-nomore text="图片详情" :visible="true" bgcolor="#f7f7f7"></tui-nomore>
 			</view>
@@ -131,12 +86,13 @@
 <script>
 	import tuiIcon from "@/components/icon/icon"
 	import tuiNomore from "@/components/nomore/nomore"
+	import tuiTag from "@/components/tag/tag"
 	import YSwiper from "../../components/y-componnents/y-swiper/y-swiper";
 	export default {
 		components: {
 			YSwiper,
 			tuiIcon,
-			tuiNomore,
+			tuiNomore,tuiTag
 		},
 		data() {
 			return {
@@ -221,23 +177,6 @@
 </script>
 
 <style lang="scss">
-	/* icon 也可以使用组件*/
-
-	.tui-banner-swiper {
-		position: relative;
-	}
-
-	.tui-banner-swiper .tui-tag-class {
-		position: absolute;
-		color: #fff;
-		bottom: 30rpx;
-		right: 0;
-	}
-
-	.tui-slide-image {
-		width: 100%;
-		display: block;
-	}
 
 	/*顶部菜单*/
 
@@ -291,30 +230,10 @@
 		padding-top: 30rpx;
 	}
 
-	.tui-list-cell {
-		position: relative;
-		display: flex;
-		align-items: center;
-		font-size: 26rpx;
-		line-height: 26rpx;
-		padding: 36rpx 30rpx;
-		box-sizing: border-box;
-	}
-
 	.tui-bold {
 		font-weight: bold;
 	}
 
-	.tui-list-cell::after {
-		content: '';
-		position: absolute;
-		border-bottom: 1rpx solid #eaeef1;
-		-webkit-transform: scaleY(0.5);
-		transform: scaleY(0.5);
-		bottom: 0;
-		right: 0;
-		left: 126rpx;
-	}
 
 	.tui-last::after {
 		border-bottom: 0 !important;
@@ -346,12 +265,24 @@
 		height: env(safe-area-inset-bottom);
 	}
 
-	/*	详细信息*/
-	.more-info-box {
-		padding: 0rpx 30rpx 30rpx 30rpx;
 
+
+	/*信息*/
+	.pro-label{
+		padding-top:10rpx;
+		.item{
+			padding-right: 10rpx;
+			display: inline-block;
+		}
+	}
+
+	/*	详细信息*/
+	/*卖点信息*/
+	.more-info-box, .sell-point-box {
+		padding: 0rpx 30rpx 30rpx 30rpx;
 		.item {
 			padding: 10rpx 0rpx;
 		}
 	}
+
 </style>

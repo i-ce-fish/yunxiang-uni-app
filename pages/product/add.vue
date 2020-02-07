@@ -80,7 +80,7 @@
 					</tui-list-cell>
 				</tui-list-view>
 				<view class="tui-btn-box">
-					<tui-button type="blue" shape="circle" @click="go('')">添加</tui-button>
+					<tui-button type="blue" shape="circle" @click="add">添加</tui-button>
 				</view>
 
 			</form>
@@ -91,7 +91,7 @@
 <script>
 	import yDropdownList from '../../components/y-componnents/y-dropdown-list/y-dropdown-list.vue'
 	import yRadio from '../../components/y-componnents/y-radio/y-radio.vue'
-	import  yPicker from '../../components/y-componnents/y-picker/y-picker'
+	import yPicker from '../../components/y-componnents/y-picker/y-picker'
 	export default {
 		components: {
 			yDropdownList,
@@ -125,6 +125,9 @@
 		},
 		methods: {
 
+			add() {
+				this.toast('未完善的功能')
+			}
 		}
 	}
 </script>

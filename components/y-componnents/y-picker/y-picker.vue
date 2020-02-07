@@ -1,7 +1,7 @@
 <template>
     <view>
         <picker :value="value" mode="multiSelector" @change="picker" @columnchange="columnPicker" :range="selectList">
-            <view class="result y-href">
+            <view class="result y-color-href">
                 {{text}}
             </view>
         </picker>

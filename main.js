@@ -40,6 +40,9 @@ Vue.mixin({
 				icon: success ? 'success' : 'none',
 				duration: duration || 2000
 			})
+		},
+		px: function(num) {
+			return uni.upx2px(num) + 'px';
 		}
 	}
 })

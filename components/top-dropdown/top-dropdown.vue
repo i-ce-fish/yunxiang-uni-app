@@ -56,7 +56,7 @@
 	}
 </script>
 
-<style scoped>
+<style >
 	.top-dropdown{
 		position: relative;
 	}
