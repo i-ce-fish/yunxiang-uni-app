@@ -33,10 +33,14 @@
 		<y-search-bar class="y-bgc search-bar" placeholder="扫码/输入商品编号"></y-search-bar>
 <!--		自顶向下的下拉框， 使用时需要为穿越过的元素设置z-index-->
 		<yDropdownSelectMulti></yDropdownSelectMulti>
-		<tui-list-view title="商品信息" >
-			<tui-list-cell v-for="o in 10" :key="o" @click="go('detail')" :arrow="true">
-				<product-item></product-item>
-			</tui-list-cell>
+		<tui-list-view title="商品信息" subtitle="向左滑动进行编辑/删除">
+			<tui-swipe-action v-for="o in 10" :key="o"  @click="handlerButton" :params="o">
+				<template v-slot:content>
+					<tui-list-cell  @click="go('detail')" :arrow="true">
+						<product-item></product-item>
+					</tui-list-cell>
+				</template>
+			</tui-swipe-action>
 		</tui-list-view>
 	</view>
 </template>
@@ -45,10 +49,11 @@
 	import ySearchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
 	import yDropdownSelectMulti from "../../components/y-componnents/y-dropdown-select-multi/y-dropdown-select-multi"
 	import productItem from './com/product-item'
+	import tuiSwipeAction from "@/components/swipe-action/swipe-action"
 
 	export default {
 		components: {
-			ySearchBar,yDropdownSelectMulti,productItem
+			ySearchBar,yDropdownSelectMulti,productItem,tuiSwipeAction
 		},
 		data() {
 			return {

@@ -95,12 +95,12 @@
 		</tui-list-view>
 				<tui-list-view title="  " color="#777" class="tui-list-view">
 <!--					<tui-list-cell class="tui-flex tui-align-between" :hover="false">-->
-<view class="tui-flex tui-align-between btn-wrapper">
+			<view class="tui-flex tui-align-between btn-wrapper">
 				<view class="tui-col-5">
 					<tui-button type="blue" shape="circle" @click="go('/')">结算订单</tui-button>
 				</view>
 				<view class="tui-col-5">
-										<tui-button class="btn-gray" type="gray" shape="circle" @click="go('ticket')">打印小票</tui-button>
+					<tui-button class="btn-gray" type="gray" shape="circle" @click="go('ticket')">打印小票</tui-button>
 
 				</view>
 				</view>

@@ -1,156 +1,131 @@
 <template>
-	<view class="y-body-list">
-		<view>
-			<uni-segmented-control class="y-margin" active-color="#007aff" style-type="button" :current="current" :values="items"
-			 @clickItem="onClickItem"></uni-segmented-control>
-			<view v-show="current === 0">
-				<uni-search-bar placeholder="小票单号" @confirm="search"></uni-search-bar>
-			</view>
-			<view v-show="current === 1">
-				<uni-search-bar placeholder="会员手机号" @confirm="search"></uni-search-bar>
-			</view>
-			<view v-show="current === 2">
-				<uni-search-bar placeholder="商品条码" @confirm="search"></uni-search-bar>
-			</view>
-			<view v-show="current === 3">
-				<view class="uni-list">
-					<view class="uni-list-cell">
-						<view class="uni-list-cell-left">
-							选择日期范围
-						</view>
-						<view class="uni-list-cell-db">
-							<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-								<view class="uni-input">{{date}}</view>
-							</picker>
-						</view>
-						<view class="uni-list-cell-db">
-							<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-								<view class="uni-input">{{date}}</view>
-							</picker>
-						</view>
-					</view>
-					<view class="uni-list-cell">
-						<view class="uni-list-cell-left">
-							选择时间范围
-						</view>
-						<view class="uni-list-cell-db">
-							<picker mode="time" :value="time" start="06:00" @change="bindTimeChange">
-								<view class="uni-input">{{time}}</view>
-							</picker>
-						</view>
-						<view class="uni-list-cell-db">
-							<picker mode="time" :value="time" start="06:00" @change="bindTimeChange">
-								<view class="uni-input">{{time}}</view>
-							</picker>
-						</view>
-					</view>
-				</view>
+	<view class="container">
 
-			</view>
+		<tui-tabs :tabs="tabs" :currentTab="currentTab" @change="onTabs" itemWidth="25%"></tui-tabs>
 
-
-
-
-			<view>
-				<uni-calendar ref="date" :insert="false" :range="true" @change="change"></uni-calendar>
-			</view>
+		<y-search-bar v-if="currentTab!=3" :placeholder="'搜索'+tabs[currentTab].name"></y-search-bar>
+		<view v-else>
+			<tui-list-cell class="tui-flex tui-align-between"  @tap="showStartDate" >
+				<view>开始日期</view>
+				<view class="y-color-href">{{startDate}}</view>
+			</tui-list-cell>
+			<tui-list-cell class="tui-flex tui-align-between"  @tap="showEndDate" >
+				<view>结束日期</view>
+				<view class="y-color-href">{{endDate}}</view>
+			</tui-list-cell>
 		</view>
 
-		<uni-list>
-			<uni-list-item v-for="i in 4" :key="i" :show-arrow="false" @tap="goTicketDetail">
-				<view class="uni-row-margin">
-					<view class="uni-flex uni-row" style="-webkit-justify-content: space-between;justify-content: space-between;">
-						<view class="text">
-							小票单号：1234567789
-						</view>
-						<view class="text">
-							2019/12/12 12:12:00
-						</view>
-					</view>
-					<view class="uni-flex uni-row">
-						<view class="uni-flex-item">
-							会员：1234567789
-						</view>
-						<view class="uni-flex-item text-right ">
-							件数: 1 金额: ￥99.99
-						</view>
+<!--		退换货列表明细-->
+		<tui-list-view title="退换货列表">
+			<tui-list-cell class="list-box" v-for="(item,index) in 5" :key="index" @tap="go('./ticket-detail')">
 
+				<view class="tui-flex tui-align-between" >
+					<view>小票单号：1234567789
+					</view>
+					<view>
+						2019/12/12 12:12:00
 					</view>
 				</view>
-			</uni-list-item>
-		</uni-list>
+				<view class="tui-flex tui-align-between" >
+					<view>
+						会员：1234567789
+					</view>
+					<view>
+						件数: 1
+					</view>
+					<view>
+						金额: ￥99.99
+					</view>
+				</view>
+			</tui-list-cell>
+		</tui-list-view>
+
+		<!--		开始时间弹窗-->
+		<tui-datetime ref="startDate" :type="1" :startYear="startYear" :endYear="endYear"
+					  :setDateTime="startDate" @confirm="onStartDate"></tui-datetime>
+
+		<!--		结束时间弹窗-->
+		<tui-datetime ref="endDate" :type="1" :startYear="startYear" :endYear="endYear"
+					  :setDateTime="endDate" @confirm="onEndDate"></tui-datetime>
+
 	</view>
 </template>
-
 <script>
-	import uniCalendar from '@/components/uni-calendar/uni-calendar.vue'
-	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
-	import uniSegmentedControl from "@/components/uni-segmented-control/uni-segmented-control.vue"
+	import ySearchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
+	import tuiTabs from "@/components/tui-tabs/tui-tabs"
+	import tuiDatetime from "@/components/dateTime/dateTime"
+	import {parseTime} from "../../utils/datetime";
 
-	function getDate(type) {
-		const date = new Date();
-
-		let year = date.getFullYear();
-		let month = date.getMonth() + 1;
-		let day = date.getDate();
-
-		if (type === 'start') {
-			year = year - 60;
-		} else if (type === 'end') {
-			year = year + 2;
-		}
-		month = month > 9 ? month : '0' + month;;
-		day = day > 9 ? day : '0' + day;
-
-		return `${year}-${month}-${day}`;
-	}
-	export default {
-		components: {
-			uniCalendar,
-			uniSearchBar,
-			uniSegmentedControl
+	export  default {
+		components:{
+			tuiTabs,ySearchBar,
+			tuiDatetime
 		},
-		data() {
-			return {
-				date: getDate({
-					format: true
-				}),
-				startDate: getDate('start'),
-				endDate: getDate('end'),
-				time: '12:01',
-				items: ['小票', '会员', '条码', '日期'],
-				current: 0
+		data(){
+			return{
+				//tabs
+				currentTab: 0,
+				tabs: [{
+					name: "小票单号",
+				}, {
+					name: "会员手机号",
 
+				}, {
+					name: "商品条码",
+				},{
+					name:"日期时间"
+				}],
 
-
+				//datetime
+				type: 4,
+				startYear: 1980,
+				endYear: 2020,
+				//日期格式有要求
+				startDate: "2000-01-01 00:00",
+				endDate: "2000-01-01 00:00"
 			}
 		},
-		methods: {
-			goTicketDetail() {
-				uni.navigateTo({
-					url: "ticket-detail"
-				})
+		created(){
+			this.initData()
+		},
+		methods:{
+			onTabs(e) {
+				this.currentTab = e.index
 			},
-
-			bindDateChange: function(e) {
-				this.date = e.target.value
+			initData(){
+				//initDatetime
+				let now = new Date()
+				this.endDate = parseTime(now,'{y}-{m}-{d} {h}:{i}')
+				//开始时间设置为前一天
+				now.setTime(now.getTime()-24*60*60*1000)
+				this.startDate = parseTime(now,'{y}-{m}-{d} {h}:{i}')
 			},
-			bindTimeChange: function(e) {
-				this.time = e.target.value
+			//datetime
+			showStartDate() {
+				this.$refs.startDate.show()
 			},
-
-			onClickItem(e) {
-				if (this.current !== e.currentIndex) {
-					this.current = e.currentIndex;
-				}
+			showEndDate() {
+				this.$refs.endDate.show()
+			},
+			onStartDate(e) {
+				this.startDate = e.result
+			},
+			onEndDate(e){
+				this.endDate = e.result
 			}
 
 		}
+
 	}
 </script>
+<style lang="scss" scoped>
 
-<style>
-	.text-right {
-		text-align: right;
+.list-box{
+	display: block;
+	>view{
+		/*每个儿子view*/
+		padding: 10rpx 0;
 	}
+}
+
 </style>

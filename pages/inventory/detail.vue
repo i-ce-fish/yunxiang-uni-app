@@ -1,120 +1,118 @@
 <template>
-	<view class="y-body-bg">
-		<view class="uni-list ">
-			<uni-search-bar placeholder="商品编号" @confirm="search"></uni-search-bar>
-		</view>
-		<view class="uni-list ">
-			<view class="y-form-item uni-list-cell uni-flex uni-row">
-				<view class="uni-flex-item">
-					商品名称
-				</view>
-				<view class="uni-flex-item">
-					款号
-				</view>
-			</view>
-			<view class="y-form-item uni-list-cell uni-flex uni-row">
-				<view class="uni-flex-item">
-					年份
-				</view>
-				<view class="uni-flex-item">
-					季节
-				</view>
-				<view class="uni-flex-item">
-					销量
-				</view>
-				<view class="uni-flex-item">
-					库存
-				</view>
-			</view>
-		</view>
-		<view class="y-row-split">
-		</view>
-		<view class="uni-list">
-			<view class="uni-row">
-				<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
-					<view @tap="getProduct(i)" :id="i" class="scroll-view-item_H" v-for="i in 6" :key="i">
-						<view class="uni-row">
-							<image style="width: 81px;height: 81px;" src="../../static/img/home.png" mode=""></image>
-						</view>
-						<view class="uni-row">
-							红{{i}}
-						</view>
-						<view class="uni-row">
-							库存: 5
+	<view class="container">
+		<y-search-bar class="y-bgc search-bar" placeholder="扫码/输入商品编号"></y-search-bar>
+        <tui-list-view title="商品信息">
+			<tui-collapse :index="0" :current="0"  :arrow="false">
+				<template v-slot:title>
+					<tui-list-cell class="tui-flex tui-align-between" :hover="false" >
+						<view>羽绒服</view>
+						<view>款号:123456</view>
+					</tui-list-cell>
+				</template>
+				<template v-slot:content>
+					<view class="tui-content">
+						<view class="tui-flex tui-align-between">
+							<view>2018年</view>
+							<view>夏季</view>
+							<view>总销量：555</view>
+							<view>总库存：100</view>
 						</view>
 					</view>
-				</scroll-view>
-			</view>
-		</view>
+				</template>
+			</tui-collapse>
+        </tui-list-view>
 
-		<view class="uni-flex y-form-item" style="text-align: center; font-weight: bold;">
-			<view class="uni-flex-item">
-				商品编码
-			</view>
-			<view class="uni-flex-item">
-				颜色
-			</view>
-			<view class="uni-flex-item">
-				尺码
-			</view>
-			<view class="uni-flex-item">
-				数量
-			</view>
+		<view class="scroll-box">
+			<scroll-view scroll-x scroll-with-animation class="tab-view">
+				<view v-for="(item,index) in inventoryList" :key="index" class="tab-bar-item " :data-current="index" @tap.stop="swichNav">
+					<view>
+						<image src="../../static/img/dress.webp" style="width: 320rpx;height: 320rpx;" mode="aspectFit"></image>
+					</view>
+					<view style="width: 320rpx;">
+						<view class="tab-bar-title tui-center">{{item.color}}</view>
+<!--						<view class="tab-bar-title tui-center">价格: ￥{{item.price}}</view>-->
+						<view class="tab-bar-title tui-center">库存: {{item.count}}</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view  class="table-box">
+
+			<tui-list-view title="库存明细">
+				<tui-list-cell class="tui-flex"  :hover="false"
+							   v-for="(item,index) in inventoryList" :key="index">
+						<view class="tui-col-4 ">{{item.no}}</view>
+						<view class="tui-col-4 tui-center" >{{item.color}}</view>
+						<view class="tui-col-4 tui-center">{{item.size}}</view>
+						<view class="tui-col-4 tui-center">{{item.count}}</view>
+				</tui-list-cell>
+			</tui-list-view>
 
 		</view>
-		<view class="uni-list">
-			<view class="uni-list-cell y-form-item uni-flex" style="text-align: center" v-for="i in 10" :key="i">
-				<view class="uni-flex-item">
-					123456{{i}}
-				</view>
-				<view class="uni-flex-item">
-					红1
-				</view>
-				<view class="uni-flex-item">
-					M
-				</view>
-				<view class="uni-flex-item">
-					{{i}}
-				</view>
-			</view>
-		</view>
-
 	</view>
 </template>
-
 <script>
-	import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue'
-	export default {
-		components: {
-			uniSearchBar
-		},
-		data() {
-			return {
 
-			};
+	import ySearchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
+	import TuiCollapse from "../../components/tui-collapse/tui-collapse";
+
+	export default {
+		components:{
+			TuiCollapse,
+			ySearchBar
 		},
-		methods: {
-			go(url) {
-				uni.navigateTo({
-					url: url
-				})
+		data(){
+			return{
+                inventoryList:[
+                    {price:"价格",color:"颜色",count:"库存",no:"款号",size:"尺码"},
+                    {price:123,color:"绿色",count:3,no:456,size:"M"},
+                    {price:123,color:"蓝色",count:4,no:1236,size:"M"},
+                    {price:123,color:"黑色",count:5,no:123456,size:"M"},
+                    {price:123,color:"黄色",count:2,no:121233456,size:"M"},
+                ],
+
 			}
+		},
+		methods:{
+
 		}
 	}
 </script>
+<style lang="scss" scoped>
+    .tab-view {
+        width: 100%;
+        height: 480upx;
+        padding: 30rpx 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        /* #ifdef H5 */
+        // top: 44px;
+        /* #endif */
+        z-index: 99;
+        background: #fff;
+        white-space: nowrap;
+    }
 
-<style lang="scss">
-	.scroll-view_H {
-		white-space: nowrap;
-		width: 100%;
+    .tab-bar-item {
+        margin: 0 28upx;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+	.tui-content {
+		padding: 20rpx 30rpx;
+		background: #fafafa;
+		color: #555;
+		font-size: 26rpx;
 	}
 
-	.scroll-view-item_H {
-		display: inline-block;
-		width: 30%;
-		height: 300upx;
-		line-height: 300upx;
-		text-align: center;
-		font-size: 36upx;
+	.table-box{
+		margin-bottom: 50rpx;
 	}
+
+	/*.tui-list-title{*/
+		/*padding: 0 ;*/
+	/*}*/
+
 </style>

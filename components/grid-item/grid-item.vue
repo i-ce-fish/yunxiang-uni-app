@@ -12,7 +12,7 @@
 		name: "tuiGridItem",
 		props: {
 			cell: {
-				type: Number,
+				type: [Number,String],
 				default: 3
 			},
 			bgcolor: {
@@ -47,7 +47,7 @@
 <style>
 	.tui-grid {
 		position: relative;
-		padding: 40upx 20upx;
+		padding: 40upx 20rpx;
 		box-sizing: border-box;
 		background: #fff;
 		float: left;

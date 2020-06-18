@@ -165,7 +165,7 @@
 
 	.tui-keyboard-grid {
 		position: relative;
-		padding: 24upx 20upx;
+		padding: 24upx 20rpx;
 		box-sizing: border-box;
 		background: #fff;
 		width: 33.33333333%;
@@ -217,13 +217,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 48upx;
-		height: 60upx;
+		font-size: 48rpx;
+		height: 60rpx;
 		color: #000;
 	}
 
 	.tui-fontsize-32 {
-		font-size: 32upx;
+		font-size: 32rpx;
 		color: #333 !important;
 	}
 </style>

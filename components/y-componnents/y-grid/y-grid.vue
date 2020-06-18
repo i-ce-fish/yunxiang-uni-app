@@ -1,14 +1,12 @@
 <template>
     <tui-grid>
-        <block v-for="(item,index) in dataList" :key="index">
             <!--不支持class-->
-            <tui-grid-item :cell="cell" @click="click(index)">
+            <tui-grid-item v-for="(item,index) in dataList" :key="index" :cell="cell" @click="click(index)">
                 <view class="tui-grid-icon">
                     <tui-icon :name="item.icon" :size="item.size" :color="item.color"></tui-icon>
                 </view>
                 <text class="tui-grid-label">{{item.name}}</text>
             </tui-grid-item>
-        </block>
     </tui-grid>
 </template>
 <script>
@@ -32,6 +30,7 @@
                 this.toast("未完成的功能~");
             },
             click(index) {
+                console.log(index)
                 this.$emit('click',index)
             }
         }
@@ -40,8 +39,8 @@
 
 <style scoped lang="scss">
     .tui-grid-icon {
-        width: 64upx;
-        height: 64upx;
+        width: 64rpx;
+        height: 64rpx;
         margin: 0 auto;
         text-align: center;
         vertical-align: middle;

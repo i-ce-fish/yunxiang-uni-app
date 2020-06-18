@@ -47,6 +47,6 @@
 		justify-content: center;
 		z-index: 99;
 		background: #fafafa;
-		font-size: 24upx;
+		font-size: 24rpx;
 	}
 </style>

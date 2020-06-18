@@ -153,17 +153,19 @@
 				"navigationBarTitleText": "小票记录"
 			}
 		}, {
-			"path": "pages/test/test",
-			"style": {
-				"navigationBarTitleText": "测试组件"
-			}
-		}, {
-			"path": "pages/test/selectSex",
-			"style": {}
-		}, {
 			"path": "pages/ticket/detail",
 			"style": {
 				"navigationBarTitleText": "小票详情"
+			}
+		}, {
+			"path": "pages/modify-price/modify-price",
+			"style": {
+				"navigationBarTitleText": "批量改价"
+			}
+		}, {
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "测试组件"
 			}
 		}
 	],

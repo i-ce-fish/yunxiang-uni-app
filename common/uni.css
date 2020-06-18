@@ -47,6 +47,9 @@
 	background-color: #efeff4;
 }
 
+.y-mr{
+	margin-right: 30rpx;
+}
 /*  边距 */
 .y-margin {
 	margin: 0 30rpx;

@@ -121,7 +121,7 @@
 	}
 
 	.container {
-		padding: 0 30upx 30upx 30upx;
+		padding: 0 30upx 30upx 30rpx;
 		box-sizing: border-box;
 	}
 
@@ -134,9 +134,9 @@
 
 	.tui-search-input {
 		width: 100%;
-		height: 66upx;
-		border-radius: 35upx;
-		padding: 0 30upx;
+		height: 66rpx;
+		border-radius: 35rpx;
+		padding: 0 30rpx;
 		box-sizing: border-box;
 		background: #f2f2f2;
 		display: flex;
@@ -147,19 +147,19 @@
 	.tui-input {
 		flex: 1;
 		color: #333;
-		padding: 0 16upx;
-		font-size: 28upx;
+		padding: 0 16rpx;
+		font-size: 28rpx;
 	}
 
 	.tui-input-plholder {
-		font-size: 28upx;
+		font-size: 28rpx;
 		color: #b2b2b2;
 	}
 
 	.tui-cancle {
 		color: #888;
-		font-size: 28upx;
-		padding-left: 30upx;
+		font-size: 28rpx;
+		padding-left: 30rpx;
 		flex-shrink: 0;
 	}
 
@@ -171,11 +171,11 @@
 	}
 
 	.tui-icon-delete {
-		padding: 10upx;
+		padding: 10rpx;
 	}
 
 	.tui-search-title {
-		font-size: 28upx;
+		font-size: 28rpx;
 		font-weight: bold;
 	}
 
@@ -185,8 +185,8 @@
 
 	.tui-tag-class {
 		display: inline-block;
-		margin-bottom: 20upx;
-		margin-right: 20upx;
+		margin-bottom: 20rpx;
+		margin-right: 20rpx;
 		font-size: 26upx !important;
 	}
 </style>

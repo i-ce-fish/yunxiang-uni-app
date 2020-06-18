@@ -72,7 +72,7 @@
 	.tui-input {
 		flex: 1;
 		color: #333;
-		padding: 0 16upx;
+		padding: 0 16rpx;
 	}
 
 	.btn{

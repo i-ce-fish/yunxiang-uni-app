@@ -168,7 +168,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		z-index: 9999;
+		/*	binyu */
+		/*	弹窗的z-index是1000 */
+		z-index:999;
+		/*z-index: 9999;*/
+
 	}
 
 	.tui-tabs-relative {

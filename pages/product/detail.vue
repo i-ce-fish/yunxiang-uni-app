@@ -12,16 +12,16 @@
 				</view>
 				<view class="y-padding">
 					<view class="tui-sale-info  y-font-s  y-color-gray">
-							<view class="text">款号：123456</view>
-							<view class="text">2019夏</view>
-<!--						todo -->
-							<view class="text y-color-href" @tap="go()">库存: 123</view>
+						<view class="text">款号：123456</view>
+						<view class="text">2019夏</view>
+						<!--						todo -->
+						<view class="text y-color-href" @tap="go('/pages/inventory/detail')">总库存: 123</view>
 					</view>
 					<view class="pro-label">
-						<view class="item"  v-for="(o,i) of 5">
-<!--							todo random color-->
-<!--							todo  新增编辑标签-->
-							<tui-tag size="small" :plain="true" type="high-green" shape="circle" >标签{{i}}</tui-tag>
+						<view class="item" v-for="(o,i) of 5">
+							<!--							todo random color-->
+							<!--							todo  新增编辑标签-->
+							<tui-tag size="small" :plain="true" type="high-green" shape="circle">标签{{i}}</tui-tag>
 						</view>
 					</view>
 				</view>
@@ -40,10 +40,12 @@
 						<view>款名</view>
 						<view>潮流范冰冰同款</view>
 					</view>
+
 					<view class="tui-flex tui-align-between item">
 						<view>分类</view>
 						<view>羽绒</view>
 					</view>
+
 					<view class="tui-flex tui-align-between item">
 						<view>系列</view>
 						<view>系列</view>
@@ -55,20 +57,32 @@
 				</view>
 			</view>
 			<view class="tui-cmt-box tui-mtop tui-radius-all">
-				<view class="tui-list-cell tui-last tui-between">
-					<view class="tui-bold  tui-col-12">卖点</view>
+				<view class="tui-list-cell tui-flex tui-align-between">
+					<view class="tui-flex">
+						<view class="tui-bold y-pr">卖点</view>
+						<view  class="y-font-xs y-color-gray ">向左滑动编辑卖点</view>
+					</view>
+					<view @tap="toast('null')" class="y-color-href y-font-s">
+						 添加卖点
+					</view>
 				</view>
 
-				<view class="sell-point-box  y-padding">
-					<view class="item">
-					<view class="">
-<!--						todo 头像图片-->
-						<view>用户名:1235631</view>
-					</view>
-					<view class="item">卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖</view>
-					</view>
+				<view class="sell-point-box" v-for="(item,index) of list" :key="index">
+					<tui-swipe-action  @click="handlerButton" :params="item">
+						<template v-slot:content>
+							<view class="item y-padding">
+								<view class="">
+									<!--						todo 头像图片-->
+									<view>用户名:1235631</view>
+								</view>
+								<view class="">
+									卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖 卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖点内容卖
+								</view>
+							</view>
+						</template>
+					</tui-swipe-action>
+					<tui-divider height="50" dividerColor="#ededed"></tui-divider>
 				</view>
-<!--				todo 新增编辑  卖点-->
 			</view>
 			<view class="tui-nomore-box">
 				<tui-nomore text="图片详情" :visible="true" bgcolor="#f7f7f7"></tui-nomore>
@@ -87,12 +101,17 @@
 	import tuiIcon from "@/components/icon/icon"
 	import tuiNomore from "@/components/nomore/nomore"
 	import tuiTag from "@/components/tag/tag"
-	import YSwiper from "../../components/y-componnents/y-swiper/y-swiper";
+	import YSwiper from "../../components/y-componnents/y-swiper/y-swiper"
+	import tuiSwipeAction from "@/components/swipe-action/swipe-action"
+	import tuiDivider from "@/components/divider/divider"
+
 	export default {
 		components: {
 			YSwiper,
 			tuiIcon,
-			tuiNomore,tuiTag
+			tuiNomore,
+			tuiTag,
+			tuiSwipeAction,tuiDivider
 		},
 		data() {
 			return {
@@ -141,7 +160,12 @@
 				menuShow: false,
 				popupShow: false,
 				value: 1,
-				collected: false
+				collected: false,
+				item: {
+					id: 1,
+					buyNum: 2
+				},
+				list: [{},{},{},{}]
 			}
 		},
 		onLoad: function(options) {
@@ -177,7 +201,6 @@
 </script>
 
 <style lang="scss">
-
 	/*顶部菜单*/
 
 	/*内容 部分*/
@@ -268,9 +291,10 @@
 
 
 	/*信息*/
-	.pro-label{
-		padding-top:10rpx;
-		.item{
+	.pro-label {
+		padding-top: 10rpx;
+
+		.item {
 			padding-right: 10rpx;
 			display: inline-block;
 		}
@@ -278,9 +302,11 @@
 
 	/*	详细信息*/
 	/*卖点信息*/
-	.more-info-box, .sell-point-box {
-		padding: 0rpx 30rpx 30rpx 30rpx;
+	.more-info-box,
+	.sell-point-box {
+		padding: 0  30rpx  ;
 		.item {
+		white-space: normal;
 			padding: 10rpx 0rpx;
 		}
 	}

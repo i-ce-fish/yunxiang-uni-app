@@ -46,7 +46,7 @@
 		props: {
 			//1-日期+时间（年月日+时分） 2-日期(年月日) 3-日期(年月) 4-时间（时分）
 			type: {
-				type: Number,
+				type: [String,Number],
 				default: 1
 			},
 			//年份区间
@@ -69,7 +69,7 @@
 				type: String,
 				default: "#5677fc"
 			},
-			//设置默认显示日期 2019-08-01 || 2019-08-01 17:01 || 2019/08/01 
+			//设置默认显示日期 2019-08-01 || 2019-08-01 17:01 || 2019/08/01
 			setDateTime: {
 				type: String,
 				default: ""
@@ -179,7 +179,11 @@
 				this.years = this.generateArray(this.startYear, this.endYear);
 				setTimeout(()=> {
 					this.$set(this.value, 0, this.getIndex(this.years, this.year));
+
+
 				}, 8);
+
+
 			},
 			setMonths() {
 				this.months = this.generateArray(1, 12);
@@ -200,7 +204,7 @@
 				setTimeout(()=> {
 					this.$set(this.value, this.value.length - 2, this.getIndex(this.hours, this.hour));
 				}, 8);
-				
+
 			},
 			setMinutes() {
 				this.minutes = this.generateArray(0, 59);

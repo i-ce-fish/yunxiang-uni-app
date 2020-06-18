@@ -55,12 +55,12 @@
 	/*顶部消息提醒 start*/
 	.tui-toptips {
 		width: 100%;
-		padding: 18upx 30upx;
+		padding: 18upx 30rpx;
 		box-sizing: border-box;
 		position: fixed;
 		z-index: 9999;
 		color: #fff;
-		font-size: 30upx;
+		font-size: 30rpx;
 		left: 0;
 		top: 0;
 		display: flex;
@@ -89,7 +89,7 @@
 		width: 80%;
 		box-sizing: border-box;
 		color: #fff;
-		font-size: 28upx;
+		font-size: 28rpx;
 		position: fixed;
 		visibility: hidden;
 		opacity: 0;
@@ -109,13 +109,13 @@
 	.tui-tips-content {
 		word-wrap: break-word;
 		word-break: break-all;
-		border-radius: 8upx;
-		padding: 18upx 30upx;
+		border-radius: 8rpx;
+		padding: 18upx 30rpx;
 	}
 
 	/*底部消息提醒 start*/
 	.tui-bottomtips {
-		bottom: 120upx;
+		bottom: 120rpx;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 	}

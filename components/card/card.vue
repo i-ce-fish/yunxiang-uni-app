@@ -101,10 +101,10 @@
 
 <style>
 	.tui-card {
-		margin: 0 30upx;
-		font-size: 28upx;
+		margin: 0 30rpx;
+		font-size: 28rpx;
 		background: #fff;
-		border-radius: 10upx;
+		border-radius: 10rpx;
 		box-shadow: 0 0 10upx #eee;
 		box-sizing: border-box;
 		overflow: hidden;
@@ -136,21 +136,21 @@
 		transform: scale(0.5);
 		left: 0;
 		top: 0;
-		border-radius: 20upx;
+		border-radius: 20rpx;
 		box-sizing: border-box;
 	}
 
 	.tui-card-header {
 		width: 100%;
-		padding: 20upx;
+		padding: 20rpx;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
 		box-sizing: border-box;
 		overflow: hidden;
-		border-top-left-radius: 10upx;
-		border-top-right-radius: 10upx;
+		border-top-left-radius: 10rpx;
+		border-top-right-radius: 10rpx;
 	}
 
 	.tui-card-header::after {
@@ -169,11 +169,11 @@
 	}
 
 	.tui-header-thumb {
-		height: 60upx;
-		width: 60upx;
+		height: 60rpx;
+		width: 60rpx;
 		vertical-align: middle;
-		margin-right: 20upx;
-		border-radius: 6upx;
+		margin-right: 20rpx;
+		border-radius: 6rpx;
 	}
 
 	.tui-thumb-circle {
@@ -182,31 +182,31 @@
 
 	.tui-header-title {
 		display: inline-block;
-		font-size: 30upx;
+		font-size: 30rpx;
 		color: #7a7a7a;
 		vertical-align: middle;
-		max-width: 460upx;
+		max-width: 460rpx;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
 
 	.tui-header-right {
-		font-size: 24upx;
+		font-size: 24rpx;
 		color: #b2b2b2;
 	}
 
 	.tui-card-body {
-		font-size: 32upx;
+		font-size: 32rpx;
 		color: #262b3a;
 		box-sizing: border-box;
 	}
 
 	.tui-card-footer {
-		font-size: 28upx;
+		font-size: 28rpx;
 		color: #596d96;
-		border-bottom-left-radius: 10upx;
-		border-bottom-right-radius: 10upx;
+		border-bottom-left-radius: 10rpx;
+		border-bottom-right-radius: 10rpx;
 		box-sizing: border-box;
 	}
 </style>

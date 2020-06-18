@@ -38,7 +38,7 @@
 		width: 48%;
 		margin: 1.5em auto;
 		line-height: 1.5em;
-		font-size: 24upx;
+		font-size: 24rpx;
 		text-align: center;
 	}
 
@@ -84,8 +84,8 @@
 	}
 
 	.tui-loading-2 {
-		width: 28upx;
-		height: 28upx;
+		width: 28rpx;
+		height: 28rpx;
 		border: 1px solid #8f8d8e;
 		border-radius: 50%;
 		margin: 0 6px;
@@ -119,8 +119,8 @@
 		display: inline-block;
 		margin: 0 6px;
 		vertical-align: middle;
-		width: 28upx;
-		height: 28upx;
+		width: 28rpx;
+		height: 28rpx;
 		background: 0 0;
 		border-radius: 50%;
 		border: 2px solid;

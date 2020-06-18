@@ -59,17 +59,17 @@
 	}
 
 	.tui-input {
-		height: 80upx;
+		height: 80rpx;
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-right: 20upx;
+		margin-right: 20rpx;
 		border-bottom: 2px solid #666;
 	}
 
 	.tui-margin-right {
-		margin-right: 30upx;
+		margin-right: 30rpx;
 	}
 
 	.tui-input:last-child {

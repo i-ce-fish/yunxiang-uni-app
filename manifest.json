@@ -1,14 +1,13 @@
 {
-    "name" : "yunxiang",
+    "name" : "云想店务",
     "appid" : "__UNI__4DD1303",
-    "description" : "登录模板",
-    "versionName" : "1.0.0",
+    "description" : "见微科技云想店务",
+    "versionName" : "0.2",
     "versionCode" : "100",
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
-        "compilerVersion" : 3,
         /* 模块配置 */
         "modules" : {},
         /* 应用发布信息 */
@@ -43,8 +42,17 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
-        }
+            "sdkConfigs" : {},
+            "icons" : {
+                "android" : {
+                    "hdpi" : "d:/Users/binyu/Desktop/云想/图标.png",
+                    "xhdpi" : "d:/Users/binyu/Desktop/云想/图标.png",
+                    "xxhdpi" : "d:/Users/binyu/Desktop/云想/图标.png",
+                    "xxxhdpi" : "d:/Users/binyu/Desktop/云想/图标.png"
+                }
+            }
+        },
+        "compilerVersion" : 3
     },
     /* 快应用特有相关 */
     "quickapp" : {},

@@ -2,39 +2,12 @@
 	<view class="container">
 		<notice-bar-member-detail></notice-bar-member-detail>
 
-		<searchBar placeholder="扫码/输入商品编号"></searchBar>
+		<search-bar placeholder="扫码/输入商品编号"></search-bar>
 		<view class="tui-product-list">
 			<view class="tui-product-container">
 				<block v-for="item in 6" :key="item">
 					<view class="tui-pro-item">
-						<view class="tui-flex tui-align-between">
-							<image src="https://img.alicdn.com/imgextra/i1/30266471/O1CN01FDP0yn1xflRdq5uMJ_!!0-saturn_solar.jpg_220x220.jpg_.webp"
-							 class="tui-pro-img tui-col-3" mode="widthFix" />
-							<view class="tui-pro-content tui-col-9">
-								<view class="tui-flex tui-align-between">
-									<view class="pro-brand">
-										品牌
-									</view>
-									<view class="po-sn">
-										条码: 123456{{item}}
-									</view>
-								</view>
-								<view class="pro-name">
-									商品名称
-								</view>
-								<view class="pro-detail tui-flex tui-align-between">
-									<view class="pro-color">
-										颜色
-									</view>
-									<view class="pro-size">
-										尺码
-									</view>
-									<view class="pro-season">
-										季节
-									</view>
-								</view>
-							</view>
-						</view>
+						<product-img-item></product-img-item>
 						<view class="tui-flex   tui-align-between">
 							<view class="">
 								<input type="text" value="" placeholder="导购" />
@@ -75,8 +48,10 @@
 	import tuiIcon from "@/components/icon/icon"
 	import searchBar from "../../components/y-componnents/y-search-bar/y-search-bar.vue"
 	import noticeBarMemberDetail from "../../components/y-componnents/notice-bar/notice-bar-member-detail.vue"
+	import ProductImgItem from "../product/com/product-img-item";
 	export default {
 		components: {
+			ProductImgItem,
 			tuiFab,
 			tuiIcon,
 			searchBar,
@@ -117,7 +92,7 @@
 	}
 
 	.tui-pro-item {
-		padding: 20rpx;
+		padding: 30rpx;
 		width: 100%;
 		margin-bottom: 20rpx;
 		background: #fff;
@@ -132,15 +107,7 @@
 		margin-bottom: 1rpx !important;
 	}
 
-	.tui-pro-img {
-		// height: auto;
-		padding-right: 20rpx;
-		padding-bottom: 20rpx;
-	}
 
-	.tui-pro-content {
-		box-sizing: border-box;
-	}
 
 	// 底部栏
 	.tui-tabbar {

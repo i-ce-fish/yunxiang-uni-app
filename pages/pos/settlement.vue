@@ -2,7 +2,7 @@
 	<view class="container">
 		<notice-bar-member-detail></notice-bar-member-detail>
 		<scroll-view scroll-x scroll-with-animation class="tab-view">
-			<view v-for="(item,index) in tabbar" :key="index" class="tab-bar-item " :data-current="index" @tap.stop="swichNav">
+			<view v-for="(item,index) in 5" :key="index" class="tab-bar-item " :data-current="index" @tap.stop="swichNav">
 				<view>
 					<image src="../../static/img/dress.webp" style="width: 320rpx;height: 320rpx;" mode="aspectFit"></image>
 				</view>
@@ -51,7 +51,6 @@
 		},
 		data() {
 			return {
-				tabbar: ["热门", "娱乐", "体育", "国内", "汽车"],
 				dataList: [{
 						label: "总金额",
 						value: '123',

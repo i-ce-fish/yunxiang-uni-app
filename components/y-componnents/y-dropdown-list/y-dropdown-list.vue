@@ -111,7 +111,7 @@
 
 	.tui-selected-list {
 		background: #fff;
-		border-radius: 20upx;
+		border-radius: 20rpx;
 		overflow: hidden;
 		transform: translateZ(0);
 	}

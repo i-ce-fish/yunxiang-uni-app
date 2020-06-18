@@ -257,21 +257,21 @@
 /* tag start*/
 
 .tui-tag {
-  padding: 16upx 26upx;
-  font-size: 28upx;
-  border-radius: 6upx;
+  padding: 16upx 26rpx;
+  font-size: 28rpx;
+  border-radius: 6rpx;
   /* display: inline-block;
   vertical-align: middle; */
-  line-height: 28upx;
+  line-height: 28rpx;
 }
 
 .tui-tag-small {
-  padding: 10upx 16upx;
-  font-size: 24upx;
-  border-radius: 6upx;
+  padding: 10upx 16rpx;
+  font-size: 24rpx;
+  border-radius: 6rpx;
   /* display: inline-block;
   vertical-align: middle; */
-  line-height: 24upx;
+  line-height: 24rpx;
 }
 
 .tui-tag-outline {
@@ -293,24 +293,24 @@
   box-sizing: border-box;
   left: 0;
   top: 0;
-  border-radius: 80upx;
+  border-radius: 80rpx;
   border: 1px solid #5677fc;
 }
 
 .tui-tag-fillet {
-  border-radius: 50upx;
+  border-radius: 50rpx;
 }
 
 .tui-white.tui-tag-fillet::after {
-  border-radius: 80upx;
+  border-radius: 80rpx;
 }
 
 .tui-tag-outline-fillet::after {
-  border-radius: 80upx;
+  border-radius: 80rpx;
 }
 
 .tui-tag-fillet-left {
-  border-radius: 50upx 0 0 50upx;
+  border-radius: 50upx 0 0 50rpx;
 }
 
 .tui-tag-fillet-right {
@@ -318,7 +318,7 @@
 }
 
 .tui-tag-fillet-left.tui-tag-outline::after {
-  border-radius: 100upx 0 0 100upx;
+  border-radius: 100upx 0 0 100rpx;
 }
 
 .tui-tag-fillet-right.tui-tag-outline::after {

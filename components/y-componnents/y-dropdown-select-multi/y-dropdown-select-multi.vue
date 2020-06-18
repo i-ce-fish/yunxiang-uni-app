@@ -364,25 +364,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 26upx;
+        font-size: 26rpx;
         color: #333;
     }
 
     .tui-bottom-item {
-        margin-left: 6upx;
+        margin-left: 6rpx;
     }
 
     .tui-header-bottom {
-        /*height: 70upx;*/
-        padding: 16rpx 30upx;
+        /*height: 70rpx;*/
+        padding: 16rpx 30rpx;
         box-sizing: border-box;
-        font-size: 24upx;
+        font-size: 24rpx;
         align-items: flex-start;
         overflow: hidden;
     }
 
     .tui-bottom-text {
-        line-height: 24upx;
+        line-height: 24rpx;
     }
 
     .tui-bottom-item {
@@ -390,11 +390,11 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 18upx 12upx;
-        border-radius: 40upx;
+        padding: 18upx 12rpx;
+        border-radius: 40rpx;
         box-sizing: border-box;
         background: #f2f2f2;
-        margin-right: 20upx;
+        margin-right: 20rpx;
         white-space: nowrap;
     }
 
@@ -404,15 +404,15 @@
 
 
     .tui-ml {
-        margin-left: 6upx;
+        margin-left: 6rpx;
     }
 
     .tui-seizeaseat-20 {
-        height: 20upx;
+        height: 20rpx;
     }
 
     .tui-seizeaseat-30 {
-        height: 30upx;
+        height: 30rpx;
     }
 
     .tui-middle {
@@ -427,20 +427,20 @@
     /*header 下拉选择*/
     .tui-scroll-box {
         width: 100%;
-        height: 480upx;
+        height: 480rpx;
         box-sizing: border-box;
         position: relative;
         z-index: 99;
         color: #fff;
-        font-size: 30upx;
+        font-size: 30rpx;
         word-break: break-all;
     }
 
     .tui-drop-item {
         color: #333;
-        height: 80upx;
-        font-size: 28upx;
-        padding: 20upx 40upx 20upx 40upx;
+        height: 80rpx;
+        font-size: 28rpx;
+        padding: 20upx 40upx 20upx 40rpx;
         box-sizing: border-box;
         display: inline-block;
         width: 50%;
@@ -448,7 +448,7 @@
 
     .tui-drop-btnbox {
         width: 100%;
-        height: 100upx;
+        height: 100rpx;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -461,8 +461,8 @@
         border-radius: 0 !important;
         font-size: 32upx !important;
         text-align: center;
-        height: 100upx;
-        line-height: 100upx;
+        height: 100rpx;
+        line-height: 100rpx;
         border: 0;
     }
 

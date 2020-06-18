@@ -60,12 +60,12 @@
 		flex: 1;
 		display: flex;
 		align-items: center;
-		font-size: 30upx;
+		font-size: 30rpx;
 		font-weight: bold;
 		text-align: center;
 		color: #3b4246;
 		border-left: 1px #d0dee5 solid;
 		border-top: 1px #d0dee5 solid;
-		padding: 15upx;
+		padding: 15rpx;
 	}
 </style>

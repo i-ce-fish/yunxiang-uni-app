@@ -23,9 +23,9 @@
 
 <style>
 	.tui-loading-init {
-		min-width: 200upx;
-		min-height: 200upx;
-		max-width: 500upx;
+		min-width: 200rpx;
+		min-height: 200rpx;
+		max-width: 500rpx;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -35,15 +35,15 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 9999;
-		font-size: 26upx;
+		font-size: 26rpx;
 		color: #fff;
 		background: rgba(0, 0, 0, 0.7);
-		border-radius: 10upx;
+		border-radius: 10rpx;
 	}
 
 	.tui-loading-center {
-		width: 50upx;
-		height: 50upx;
+		width: 50rpx;
+		height: 50rpx;
 		border: 3px solid #fff;
 		border-radius: 50%;
 		margin: 0 6px;
@@ -51,12 +51,12 @@
 		vertical-align: middle;
 		clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%);
 		animation: rotate 1s linear infinite;
-		margin-bottom: 36upx;
+		margin-bottom: 36rpx;
 	}
 
 	.tui-loadmore-tips {
 		text-align: center;
-		padding: 0 20upx;
+		padding: 0 20rpx;
 		box-sizing: border-box;
 	}
 

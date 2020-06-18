@@ -7,16 +7,23 @@ page {
 }
 
 /*布局*/
+
 /*左右边距*/
 .y-padding {
 	padding: 0 30rpx;
 }
-
+/*右边距*/
+.y-pr{
+	padding-right: 30rpx;
+}
 /* 颜色统一 */
 
 /*主动设置背景色*/
 .y-bgc{
 	background-color: #fafafa;
+}
+.y-bgc-white{
+	background-color: #fff;
 }
 /*字体颜色*/
 /*超链接颜色*/
@@ -40,6 +47,7 @@ page {
 	color: #00aa00;
 }
 
+
 /*字体大小 默认为30rpx（15px）*/
 
 .y-font-xs{
@@ -48,12 +56,16 @@ page {
 .y-font-s{
 	font-size: 28rpx;
 }
+.y-font-m{
+	font-size: 30rpx;
+}
 .y-font-l{
 	font-size: 32rpx;
 }
 .y-font-xl{
 	font-size: 34rpx;
 }
+
 /*行高*/
 .y-line-height-full{
 	line-height: 100%;

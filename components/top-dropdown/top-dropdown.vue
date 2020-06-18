@@ -64,8 +64,8 @@
 		width: 100%;
 		position: absolute;
 		box-sizing: border-box;
-		border-bottom-right-radius: 24upx;
-		border-bottom-left-radius: 24upx;
+		border-bottom-right-radius: 24rpx;
+		border-bottom-left-radius: 24rpx;
 		transform: translateZ(0);
 		overflow: hidden;
 		visibility: hidden;

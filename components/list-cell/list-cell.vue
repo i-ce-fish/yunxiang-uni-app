@@ -17,7 +17,7 @@
 			//是否有点击效果
 			hover: {
 				type: Boolean,
-				default: true 
+				default: true
 			},
 			//left 30rpx
 			lineLeft:{
@@ -47,7 +47,7 @@
 			},
 			size: {
 				type: Number,
-				default: 32 //字体大小
+				default: 30 //字体大小
 			},
 			color: {
 				type: String,
@@ -99,7 +99,7 @@
 	.tui-line-left::after{
 		left: 30rpx !important;
 	}
-	
+
 	.tui-line-right::after{
 		right: 30rpx !important;
 	}

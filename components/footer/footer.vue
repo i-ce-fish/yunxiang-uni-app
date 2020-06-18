@@ -63,7 +63,7 @@
 	.tui-footer {
 		width: 100%;
 		overflow: hidden;
-		padding: 30upx 24upx;
+		padding: 30upx 24rpx;
 		box-sizing: border-box;
 	}
 
@@ -79,12 +79,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 28upx;
+		font-size: 28rpx;
 	}
 
 	.tui-link {
 		position: relative;
-		padding: 0 18upx;
+		padding: 0 18rpx;
 		line-height: 1;
 	}
 
@@ -111,7 +111,7 @@
 	}
 
 	.tui-footer-copyright {
-		font-size: 24upx;
+		font-size: 24rpx;
 		color: #A7A7A7;
 		line-height: 1;
 		text-align: center;

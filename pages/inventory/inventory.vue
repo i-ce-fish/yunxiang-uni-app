@@ -1,112 +1,76 @@
 <template>
-	<view class=" y-body-list ">
-		<view class="uni-flex">
-
-			<uni-grid :column="4" :showBorder="false">
-				<uni-grid-item>
-					<view @tap="go('add')" class="icon-item">
-						<uni-icons type="plus" size="30"></uni-icons>
-						<text class="icon-item-text" >添加</text>
+	<view class="container">
+		<tui-list-view color="#777" class=" 	">
+			<tui-grid>
+				<!--不支持class-->
+				<tui-grid-item v-for="(item,index) in gridList" :key="index" cell="4" @click="clickIcon(index)">
+					<view class="tui-grid-icon">
+						<tui-icon :name="item.icon" :size="item.size" :color="item.color"></tui-icon>
 					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view @tap="go('search')" class="icon-item">
-						<uni-icons type="search" size="30"></uni-icons>
-						<text class="icon-item-text" >搜索</text>
-					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view class="icon-item">
-						<uni-icons type="more" size="30"></uni-icons>
-						<text class="icon-item-text">待定</text>
-					</view>
-				</uni-grid-item>
-				<uni-grid-item>
-					<view class="icon-item">
-						<uni-icons type="more" size="30"></uni-icons>
-						<text class="icon-item-text">待定</text>
-					</view>
-				</uni-grid-item>
-			</uni-grid>
-
-		</view>
-		<view class="uni-row-margin">
-			<uni-list>
-				<uni-list-item :title="'森马冬季羽绒服'+i" :note='"条码:1234567890 颜色：红 尺码：M 数量：23 价格：99" +i' v-for="i in 10" :key="i"
-				 :show-arrow="true" @tap="go('edit')">
-				</uni-list-item>
-			</uni-list>
-		</view>
-		
-		<view class="uni-row y-center-hor y-margin-bottom" >
-				 <uni-pagination :show-icon="true" :total="50" title="标题文字" />
-		</view>
-	 
-		
-		
+					<text class="tui-grid-label">{{item.name}}</text>
+				</tui-grid-item>
+			</tui-grid>
+		</tui-list-view>
+		<tui-list-view title="库存信息" subtitle="向左滑动进行编辑/删除" >
+			<tui-swipe-action v-for="(item,index) in gridList" :key="index"  @click="handlerButton" :params="item">
+				<template v-slot:content>
+					<tui-list-cell  @click="go('detail')" :arrow="true">
+						<product-item></product-item>
+					</tui-list-cell>
+				</template>
+			</tui-swipe-action>
+		</tui-list-view>
 	</view>
 </template>
+
 <script>
-	import uniList from "@/components/uni-list/uni-list.vue"
-	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
-	import uniGrid from "@/components/uni-grid/uni-grid.vue"
-	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
-	import uniIcons from "@/components/uni-icons/uni-icons.vue"
-	import uniPagination from '@/components/uni-pagination/uni-pagination.vue'
-	
+	import productItem from '../product/com/product-item'
+	import tuiSwipeAction from "@/components/swipe-action/swipe-action"
+	import tuiGrid from "@/components/grid/grid"
+	import tuiGridItem from '@/components/grid-item/grid-item'
+	import tuiIcon from "@/components/icon/icon"
 	export default {
 		components: {
-			uniGrid,
-			uniGridItem,
-			uniList,
-			uniListItem,
-			uniIcons,
-			uniPagination
+			tuiIcon,
+			tuiGrid,
+			tuiGridItem,
+			productItem,
+			tuiSwipeAction
+
 		},
 		data() {
-			return {};
+			return {
+				gridList: [{
+					name: "添加库存",
+					size: 30,
+					icon:"plus",
+					url:'add'
+				}, {
+					name: "搜索",
+					size: 30,
+					icon:"search",
+					url: 'search'
+
+				}, {
+					name: "待定",
+					size: 30,
+					icon:"more",
+
+				}, {
+					name: "待定",
+					size: 30,
+					icon:"more"
+				}]
+
+			};
 		},
 		methods: {
-			go(url) {
-				uni.navigateTo({
-					url: url
-				})
+			clickIcon(index) {
+				this.go(this.gridList[index].url)
 			}
 		}
-	};
+	}
 </script>
 
-<style lang="scss">
-	.scroll-view_H {
-		white-space: nowrap;
-		width: 100%;
-	}
-
-
-	.scroll-view-item_H {
-		display: inline-block;
-		width: 100%;
-		height: 300upx;
-		line-height: 300upx;
-		text-align: center;
-		font-size: 36upx;
-	}
-
-	.icon-item {
-		/* #ifndef APP-NVUE */
-		display: flex;
-		box-sizing: border-box;
-		/* #endif */
-		width: 180rpx;
-		padding: 30rpx 10rpx;
-		text-align: center;
-		flex-direction: column;
-	}
-
-	.icon-item-text {
-		font-size: 24rpx;
-		text-align: center;
-	}
-	
-	 
+<style>
 </style>

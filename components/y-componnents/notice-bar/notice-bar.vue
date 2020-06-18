@@ -47,10 +47,10 @@
 	/*  noticeBar */
 	.tui-notice-board {
 		width: 100%;
-		padding-right: 30upx;
+		padding-right: 30rpx;
 		box-sizing: border-box;
-		font-size: 28upx;
-		height: 80upx;
+		font-size: 28rpx;
+		height: 80rpx;
 		background: #fff8d5;
 		display: flex;
 		align-items: center;
@@ -58,13 +58,13 @@
 
 	.tui-icon-bg {
 		background: #fff8d5;
-		padding-left: 30upx;
+		padding-left: 30rpx;
 		position: relative;
 		z-index: 10;
 	}
 
 	.tui-icon-class {
-		margin-right: 12upx;
+		margin-right: 12rpx;
 	}
 
 	.tui-scorll-view {
@@ -75,7 +75,7 @@
 		/* overflow: hidden; */
 		color: #de8c17;
 	}
-	
+
 	.tui-notice{
 		line-height: 35rpx;
 	}

@@ -35,7 +35,21 @@
 			actions: {
 				type: Array,
 				default: function(){
-					return []
+					return [
+						{
+							name: '编辑',
+							color: '#fff',
+							fontsize: 28,
+							width: 64,
+							background: '#FF7035'
+						},
+						{
+							name: '删除',
+							color: '#fff',
+							fontsize: 28,
+							width: 64,
+							background: '#F82400'
+						}]
 				}
 			},
 			//是否可关闭，默认可关闭，可以单独控制
@@ -169,7 +183,7 @@
 					index: Number(dataset.index),
 					item: this.params
 				})
-				
+
 			},
 			closeButtonGroup() {
 				this.position = {
@@ -200,7 +214,8 @@
 
 	.swipe-action-show {
 		position: relative;
-		z-index: 99999
+		/*binyu 挡住顶部tabbar*/
+		/*z-index: 99999*/
 	}
 
 	.tui-swipeout-item {
